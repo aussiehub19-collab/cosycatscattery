@@ -2,6 +2,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { SITE } from '@/config/site';
 import { sendMail, isMailerConfigured } from '@/lib/mailer';
+import { contactEmailHtml } from '@/lib/emailTemplates';
 
 export const dynamic = 'force-dynamic';
 
@@ -47,6 +48,7 @@ export async function POST(req: NextRequest) {
         'Message:',
         message,
       ].join('\n'),
+      html: contactEmailHtml({ name, email, phone, location, interest, message }),
     });
 
     return NextResponse.json(

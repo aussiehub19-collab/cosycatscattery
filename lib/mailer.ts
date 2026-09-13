@@ -25,10 +25,12 @@ export function isMailerConfigured(): boolean {
 export async function sendMail({
   subject,
   text,
+  html,
   replyTo,
 }: {
   subject: string;
   text: string;
+  html?: string;
   replyTo?: string;
 }): Promise<void> {
   const t = getTransporter();
@@ -42,5 +44,6 @@ export async function sendMail({
     replyTo,
     subject,
     text,
+    html,
   });
 }
