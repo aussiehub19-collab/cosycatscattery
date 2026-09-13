@@ -1,0 +1,221 @@
+COSY CATS CATTERY — KEYWORD CLUSTERS
+Generated 2026-09-13 | Source: 5 CSV exports, Keyword exports/ | Market: AU
+Format: one cluster per block. WebForge pulls the next STATUS=unused blog cluster for each new post.
+
+===============================================================
+CLUSTER: homepage-primary
+PRIMARY: maine coon kittens for sale (3600, kd8, transactional)
+SECONDARY: buy maine coon kittens (2900, kd8); maine coon cats australia (1000, kd6); maine coon breeders (480, kd10); maine coon price (1000, kd11); maine coon cattery (50, kd10); maine coon australia (1600, kd17)
+PAGE: /
+TIER: T1
+STATUS: assigned
+
+===============================================================
+CLUSTER: shop-listing
+PRIMARY: maine coon kittens for sale australia (390, kd14, transactional)
+SECONDARY: buy a maine coon kitten (170, kd6); maine coon cats for sale australia (320, kd6); maine coon kitten for sale (170, kd5); maine coons for sale (110, kd5); maine coon kittens price (480, kd9)
+PAGE: /shop/
+TIER: T1
+STATUS: assigned
+
+===============================================================
+CLUSTER: about-breeder-authority
+PRIMARY: maine coon breeders (480, kd10, informational/commercial)
+SECONDARY: maine coon cattery (50, kd10); maine coon breeder (480, kd6); maine coon cat breeders (480, kd13); maine coon australia (1600, kd17); maine coon adoption (110, kd6)
+PAGE: /about/
+TIER: T1
+STATUS: assigned
+
+===============================================================
+CLUSTER: contact-regional
+PRIMARY: maine coon breeders sydney (70, kd1, informational)
+SECONDARY: maine coon for sale near me (70, kd4); maine coon in australia (70, kd8); maine coon adoption (110, kd6); maine coon kittens for sale melbourne (390, kd9); maine coon au (110, kd5)
+PAGE: /contact/
+TIER: T1
+STATUS: assigned
+
+===============================================================
+CLUSTER: wholesale-cat-furniture
+PRIMARY: maine coon cat tower (70, kd9, commercial)
+SECONDARY: [DATA GAP — no other wholesale/trade/B2B keywords in dataset]
+PAGE: /wholesale/
+TIER: T1
+STATUS: assigned (needs supplemental keyword pull)
+
+===============================================================
+CLUSTER: faq-pricing
+PRIMARY: how much is a maine coon kitten (210, kd8, informational)
+SECONDARY: how much do maine coon kittens cost (140, kd18); how much is a maine coon cat (260, kd15); how much is maine coon (320, kd14); how much for a maine coon cat (50, kd7); how much are maine coon cats (390, kd13); how much is a maine coon (50, kd12)
+PAGE: /faq/
+TIER: T1/T2 mix
+STATUS: assigned
+
+===============================================================
+CLUSTER: blog-pillar-breed-guide
+PRIMARY: maine coon breed (170-210, kd22-27, informational)
+SECONDARY: maine coon breeds (210, kd22); maine coon cat breed (480, kd21); maine coon breed of cat (70, kd27); cat coon breed (70, kd33); what's a maine coon cat (480, kd32)
+PAGE: /blog/ (index) + pillar post
+TIER: T2
+STATUS: assigned
+
+-------------------------------------------------------------
+PRODUCT CLUSTERS (kitten listings — repeatable formula)
+-------------------------------------------------------------
+
+CLUSTER: product-bob-tortoiseshell
+PRIMARY: tortoiseshell maine coon kitten (~modeled~, no isolated volume)
+SECONDARY: black maine coon kitten (210, kd13); maine coon kittens for sale (3600, kd8); maine coon kitten for sale (170, kd5); maine coon kittens price (480, kd9); maine coon breeders (480, kd10); maine coon cattery (50, kd10)
+PAGE: /shop/bob-male-maine-coon-kitten/
+TIER: T1 (formula page)
+STATUS: assigned
+
+CLUSTER: product-frayer-silver-tabby
+PRIMARY: maine coon tabby kitten (170, kd7, informational)
+SECONDARY: maine coon kittens for sale (3600, kd8); maine coon kitten for sale (170, kd5); maine coon kittens price (480, kd9); maine coon breeders (480, kd10); maine coon cattery (50, kd10)
+PAGE: /shop/frayer-female-maine-coon-kitten/
+TIER: T1
+STATUS: assigned
+
+CLUSTER: product-luffy-ginger-tabby
+PRIMARY: ginger maine coon kitten (110, kd13, informational)
+SECONDARY: maine coon kittens for sale (3600, kd8); maine coon kitten for sale (170, kd5); maine coon kittens price (480, kd9); maine coon breeders (480, kd10); maine coon cattery (50, kd10)
+PAGE: /shop/luffy-male-maine-coon-kitten/
+TIER: T1
+STATUS: assigned
+
+CLUSTER: product-maya-ginger-tabby
+PRIMARY: ginger maine coon kitten (110, kd13, informational) — shared with Luffy, differentiate via gender + copy
+SECONDARY: maine coon kittens for sale (3600, kd8); maine coon kitten for sale (170, kd5); maine coon kittens price (480, kd9); maine coon breeders (480, kd10); maine coon cattery (50, kd10)
+PAGE: /shop/maya-female-maine-coon-kitten/
+TIER: T1
+STATUS: assigned
+
+CLUSTER: product-smokey1-brown-tabby
+PRIMARY: maine coon tabby kitten (170, kd7, informational)
+SECONDARY: maine coon kittens for sale (3600, kd8); maine coon kitten for sale (170, kd5); maine coon kittens price (480, kd9); maine coon breeders (480, kd10); maine coon cattery (50, kd10)
+PAGE: /shop/smokey-male-maine-coon-kitten-1/
+TIER: T1
+STATUS: assigned
+
+CLUSTER: product-smokey2-silver
+PRIMARY: silver maine coon kitten (~modeled~, no isolated volume)
+SECONDARY: maine coon tabby kitten (170, kd7); maine coon kittens for sale (3600, kd8); maine coon kitten for sale (170, kd5); maine coon kittens price (480, kd9); maine coon breeders (480, kd10)
+PAGE: /shop/smokey-male-maine-coon-kitten-2/
+TIER: T1 (formula page)
+STATUS: assigned
+
+CLUSTER: product-snowball-white
+PRIMARY: white maine coon kitten (~modeled~, no isolated volume)
+SECONDARY: black maine coon kitten (210, kd13 — colour-contrast pairing angle); maine coon kittens for sale (3600, kd8); maine coon kitten for sale (170, kd5); maine coon kittens price (480, kd9); maine coon breeders (480, kd10)
+PAGE: /shop/snowball-female-maine-coon-kitten/
+TIER: T1 (formula page)
+STATUS: assigned
+
+CLUSTER: product-wolverine-charcoal-tabby
+PRIMARY: maine coon tabby kitten (170, kd7, informational)
+SECONDARY: maine coon kittens for sale (3600, kd8); maine coon kitten for sale (170, kd5); maine coon kittens price (480, kd9); maine coon breeders (480, kd10); maine coon cattery (50, kd10)
+PAGE: /shop/wolverine-male-maine-coon-kitten/
+TIER: T1
+STATUS: assigned
+
+CLUSTER: product-ziggy-tuxedo
+PRIMARY: black maine coon kitten (210, kd13, informational) — tuxedo pattern has no isolated volume; "black" is nearest real term
+SECONDARY: maine coon kittens for sale (3600, kd8); maine coon kitten for sale (170, kd5); maine coon kittens price (480, kd9); maine coon breeders (480, kd10); maine coon cattery (50, kd10)
+PAGE: /shop/ziggy-male-maine-coon-kitten/
+TIER: T1
+STATUS: assigned
+
+CLUSTER: product-zo-silver-tabby
+PRIMARY: maine coon tabby kitten (170, kd7, informational)
+SECONDARY: maine coon kittens for sale (3600, kd8); maine coon kitten for sale (170, kd5); maine coon kittens price (480, kd9); maine coon breeders (480, kd10); maine coon cattery (50, kd10)
+PAGE: /shop/zo-male-maine-coon-kitten/
+TIER: T1
+STATUS: assigned
+
+CLUSTER: product-grooming-suite
+PRIMARY: maine coon grooming (50, kd10, informational)
+SECONDARY: maine coon cat grooming (50, kd9); grooming a maine coon (50, kd9); grooming a maine coon cat (50, kd9); grooming maine coon cats (50, kd9); maine coon groomer (40, kd4)
+PAGE: /shop/royal-velvet-maine-coon-grooming-suite/
+TIER: T2
+STATUS: assigned
+
+CLUSTER: product-nutrition-pack
+PRIMARY: [DATA GAP — zero keywords in dataset for maine coon food/diet/nutrition]
+SECONDARY: none available
+PAGE: /shop/holistic-giant-breed-vitality-pack/
+TIER: unassigned
+STATUS: assigned (needs supplemental keyword pull — see product-gaps.md)
+
+-------------------------------------------------------------
+BLOG CLUSTERS (unused — pull next for each new post, T1 first)
+-------------------------------------------------------------
+
+CLUSTER: blog-price-guide
+PRIMARY: how much is a maine coon kitten (210, kd8, informational)
+SECONDARY: maine coon price (1000, kd11); maine coon kittens price (480, kd9); maine coon price australia (170, kd7); maine coon australia price (140, kd5); maine coon cat price australia (210, kd6); maine coon cat cost (590, kd17)
+PAGE: new blog post
+TIER: T1
+STATUS: unused
+
+CLUSTER: blog-temperament-family-pets
+PRIMARY: are maine coon cats good pets (20, informational — question bank)
+SECONDARY: are maine coon cats affectionate (20); are maine coon cats good with dogs (20); do maine coon cats get along with dogs (20); are maine coon cats good for first time owners (20); are maine coon cats high maintenance (20); are maine coons friendly (20)
+PAGE: new blog post
+TIER: question-bank (informational, per brief — volume floor waived for blog/FAQ)
+STATUS: unused
+
+CLUSTER: blog-colour-and-coat-guide
+PRIMARY: black maine coon kitten (210, kd13, informational)
+SECONDARY: ginger maine coon kitten (110, kd13); ginger maine coon cat (320, kd21); black maine coon cat (210, kd18); black maine coon (720, kd20); maine coon tabby kitten (170, kd7)
+PAGE: new blog post
+TIER: T1/T2 mix
+STATUS: unused
+
+CLUSTER: blog-size-and-growth
+PRIMARY: giant maine coon (260, kd19-27, informational)
+SECONDARY: large maine coon cat (170, kd23); large maine coon (90, kd12); maine coon cats weigh (40); how heavy is a maine coon cat (20 — question bank); how heavy are maine coon cats (20 — question bank)
+PAGE: new blog post
+TIER: T1/T2 mix
+STATUS: unused
+
+CLUSTER: blog-indoor-outdoor-lifestyle
+PRIMARY: are maine coon cats indoor cats (20, informational — question bank)
+SECONDARY: are maine coon cats indoor or outdoor (20); can maine coon cats go outside (20); can a maine coon be an indoor cat (20); can you walk a maine coon (20); can you walk a maine coon on a leash (20)
+PAGE: new blog post
+TIER: question-bank
+STATUS: unused
+
+CLUSTER: blog-grooming-care
+PRIMARY: maine coon grooming (50, kd10, informational)
+SECONDARY: maine coon cat grooming (50, kd9); grooming a maine coon (50, kd9); grooming maine coon cats (50, kd9); do you have to bathe maine coon cats (20 — question bank); maine coon groomer (40, kd4)
+PAGE: new blog post
+TIER: T2
+STATUS: unused
+
+CLUSTER: blog-breeders-guide-au
+PRIMARY: maine coon breeders (480, kd10, informational/commercial)
+SECONDARY: maine coon cat breeders (480, kd13); maine coon breeder (480, kd6); maine coon breeders sydney (70, kd1); maine coon cattery (50, kd10); maine coon adoption (110, kd6)
+PAGE: new blog post
+TIER: T1
+STATUS: unused
+
+CLUSTER: blog-behaviour-myths
+PRIMARY: can a maine coon kill a dog (20, informational — question bank, myth-busting angle)
+SECONDARY: can a maine coon kill a fox (20); can a maine coon kill a human (20); are maine coon cats dangerous (20); are maine coon cats aggressive (20); are maine coon cats wild (20)
+PAGE: new blog post
+TIER: question-bank
+STATUS: unused
+
+CLUSTER: blog-identifying-a-real-maine-coon
+PRIMARY: how do i know if my cat is maine coon (20, informational — question bank)
+SECONDARY: how can i tell if my cat is maine coon (20); could my cat be part maine coon (20); how do you know if your cat is maine coon (20); maine coon breed of cat (70, kd27); what's a maine coon cat (480, kd32)
+PAGE: new blog post
+TIER: T2/question-bank mix
+STATUS: unused
+
+CLUSTER: blog-history-origin
+PRIMARY: how did the maine coon originate (20, informational — question bank)
+SECONDARY: maine coon breed (170-210, kd22-27); maine coon breeds (210, kd22); american maine coon cats (480, kd28); european maine coon (30, kd20); european maine coon cat (40, kd22)
+PAGE: new blog post (existing polydactyl post could roll into this pillar — see blog-plan.md)
+TIER: T2
+STATUS: unused
