@@ -235,8 +235,10 @@ export default function HomePage() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {featuredProducts.map(product => (
-            <div
+            <Link
+              href={`/shop/${product.slug}/`}
               key={product.slug}
+              aria-label={`View ${product.name}`}
               className="bg-slate-900 border border-slate-800 hover:border-amber-500/40 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 flex flex-col group"
             >
               <div className="relative bg-slate-950 overflow-hidden">
@@ -275,17 +277,16 @@ export default function HomePage() {
                 </div>
 
                 <div className="pt-3 border-t border-slate-800/80 flex items-center justify-between">
-                  <Link
-                    href={`/shop/${product.slug}/`}
+                  <span
                     id={`view-kitten-${product.slug}`}
-                    className="w-full py-2.5 bg-slate-950 hover:bg-gradient-to-r hover:from-amber-500 hover:to-amber-600 hover:text-slate-950 text-slate-200 text-xs font-bold rounded-lg border border-slate-800 hover:border-transparent transition-all flex items-center justify-center gap-1.5"
+                    className="w-full py-2.5 bg-slate-950 group-hover:bg-gradient-to-r group-hover:from-amber-500 group-hover:to-amber-600 group-hover:text-slate-950 text-slate-200 text-xs font-bold rounded-lg border border-slate-800 group-hover:border-transparent transition-all flex items-center justify-center gap-1.5"
                   >
                     <span>View Pedigree & Reserve</span>
                     <ArrowRight className="w-3.5 h-3.5" />
-                  </Link>
+                  </span>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
 

@@ -101,27 +101,27 @@ export default function ShopClient() {
             id={`product-card-${product.slug}`}
             className="bg-slate-900 border border-slate-800 hover:border-amber-500/40 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 flex flex-col group"
           >
-            <div className="relative bg-slate-950 overflow-hidden">
-              <SmartImage
-                src={product.images[0]}
-                alt={product.name}
-                aspectRatio={product.imageAspect || '4/3'}
-                className="group-hover:scale-105 transition-transform duration-500"
-              />
-              {product.badge && (
-                <span className="absolute top-3 left-3 bg-gradient-to-r from-amber-500 to-amber-600 text-slate-950 text-[10px] font-extrabold uppercase px-2.5 py-1 rounded-full shadow-md">
-                  {product.badge}
-                </span>
-              )}
-              {product.specs?.gender && (
-                <span className="absolute top-3 right-3 bg-slate-950/80 border border-slate-700 text-slate-200 text-[10px] font-bold uppercase px-2.5 py-1 rounded-full shadow-md backdrop-blur-sm">
-                  {product.specs.gender === 'Male' ? '♂ Male' : '♀ Female'}
-                </span>
-              )}
-            </div>
+            <Link href={`/shop/${product.slug}/`} className="flex flex-col flex-1" aria-label={`View ${product.name}`}>
+              <div className="relative bg-slate-950 overflow-hidden">
+                <SmartImage
+                  src={product.images[0]}
+                  alt={product.name}
+                  aspectRatio={product.imageAspect || '4/3'}
+                  className="group-hover:scale-105 transition-transform duration-500"
+                />
+                {product.badge && (
+                  <span className="absolute top-3 left-3 bg-gradient-to-r from-amber-500 to-amber-600 text-slate-950 text-[10px] font-extrabold uppercase px-2.5 py-1 rounded-full shadow-md">
+                    {product.badge}
+                  </span>
+                )}
+                {product.specs?.gender && (
+                  <span className="absolute top-3 right-3 bg-slate-950/80 border border-slate-700 text-slate-200 text-[10px] font-bold uppercase px-2.5 py-1 rounded-full shadow-md backdrop-blur-sm">
+                    {product.specs.gender === 'Male' ? '♂ Male' : '♀ Female'}
+                  </span>
+                )}
+              </div>
 
-            <div className="p-5 flex-1 flex flex-col justify-between space-y-4">
-              <div>
+              <div className="p-5 flex-1">
                 <div className="flex items-center justify-between text-xs text-amber-400 font-semibold mb-1">
                   <span className="uppercase tracking-wider">
                     {product.category === 'kittens' ? 'Pedigree Kitten' : 'Royal Care Item'}
@@ -131,36 +131,36 @@ export default function ShopClient() {
                   </span>
                 </div>
                 <h2 className="font-serif text-base font-bold text-white group-hover:text-amber-300 transition-colors line-clamp-1">
-                  <Link href={`/shop/${product.slug}/`}>{product.name}</Link>
+                  {product.name}
                 </h2>
                 <p className="text-xs text-slate-400 mt-2 line-clamp-2 leading-relaxed">
                   {product.shortDescription}
                 </p>
               </div>
+            </Link>
 
-              <div className="pt-3 border-t border-slate-800/80 space-y-2">
-                <button
-                  type="button"
-                  onClick={() => handleQuickAdd(product)}
-                  className="w-full py-2.5 bg-gradient-to-r from-amber-500 to-amber-600 text-slate-950 text-xs font-bold rounded-lg hover:brightness-110 active:scale-95 transition-all flex items-center justify-center gap-1.5 shadow-md shadow-amber-500/10"
-                >
-                  {addedSlug === product.slug ? (
-                    <>
-                      <Check className="w-3.5 h-3.5" /> Added to Reservation
-                    </>
-                  ) : (
-                    <>
-                      <ShoppingBag className="w-3.5 h-3.5" /> Quick Reserve / Add
-                    </>
-                  )}
-                </button>
-                <Link
-                  href={`/shop/${product.slug}/`}
-                  className="w-full py-2 bg-slate-950 hover:bg-slate-850 text-slate-300 hover:text-white text-xs font-semibold rounded-lg border border-slate-800 text-center block transition-colors"
-                >
-                  View Pedigree & Genetics &rarr;
-                </Link>
-              </div>
+            <div className="px-5 pb-5 pt-3 border-t border-slate-800/80 space-y-2">
+              <button
+                type="button"
+                onClick={() => handleQuickAdd(product)}
+                className="w-full py-2.5 bg-gradient-to-r from-amber-500 to-amber-600 text-slate-950 text-xs font-bold rounded-lg hover:brightness-110 active:scale-95 transition-all flex items-center justify-center gap-1.5 shadow-md shadow-amber-500/10"
+              >
+                {addedSlug === product.slug ? (
+                  <>
+                    <Check className="w-3.5 h-3.5" /> Added to Reservation
+                  </>
+                ) : (
+                  <>
+                    <ShoppingBag className="w-3.5 h-3.5" /> Quick Reserve / Add
+                  </>
+                )}
+              </button>
+              <Link
+                href={`/shop/${product.slug}/`}
+                className="w-full py-2 bg-slate-950 hover:bg-slate-850 text-slate-300 hover:text-white text-xs font-semibold rounded-lg border border-slate-800 text-center block transition-colors"
+              >
+                View Pedigree & Genetics &rarr;
+              </Link>
             </div>
           </div>
         ))}
