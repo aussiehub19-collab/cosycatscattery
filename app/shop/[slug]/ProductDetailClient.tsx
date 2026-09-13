@@ -83,7 +83,7 @@ export default function ProductDetailClient({ product, relatedProducts }: Produc
                     activeImage === img ? 'border-amber-400 shadow-md' : 'border-slate-800 opacity-60 hover:opacity-100'
                   }`}
                 >
-                  <SmartImage src={img} alt={`${product.name} view ${idx + 1}`} aspectRatio={product.imageAspect || '4/3'} />
+                  <SmartImage src={img} alt={`${product.name} view ${idx + 1}`} aspectRatio="4/5" objectPosition="top" />
                 </button>
               ))}
             </div>
@@ -236,7 +236,8 @@ export default function ProductDetailClient({ product, relatedProducts }: Produc
                 <SmartImage
                   src={rel.images[0]}
                   alt={rel.name}
-                  aspectRatio={rel.imageAspect || '4/3'}
+                  aspectRatio="4/5"
+                  objectPosition="top"
                   className="group-hover:scale-105 transition-transform duration-500"
                 />
                 {rel.specs?.gender && (

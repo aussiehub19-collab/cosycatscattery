@@ -17,6 +17,10 @@ interface SmartImageProps {
    * whole photo uncropped. Real animal photography (product/kitten cards)
    * should use 'contain' so no part of the cat is cut off. */
   objectFit?: 'cover' | 'contain';
+  /** Anchor point kept in view when objectFit="cover" crops the photo.
+   * 'top' keeps faces/ears in frame when a portrait photo is cropped to
+   * a shorter uniform card ratio (any surface/floor is cropped instead). */
+  objectPosition?: 'top' | 'center' | 'bottom';
 }
 
 export default function SmartImage({
@@ -30,6 +34,7 @@ export default function SmartImage({
   fill = false,
   sizes,
   objectFit = 'cover',
+  objectPosition = 'center',
 }: SmartImageProps) {
   // A failed image shows an empty frame, never a substitute stock photo —
   // swapping in a different cat's photo when a real listing's image 404s
@@ -60,6 +65,7 @@ export default function SmartImage({
         referrerPolicy="no-referrer"
         sizes={sizes || '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'}
         className={`${objectFit === 'contain' ? 'object-contain' : 'object-cover'} ${className}`}
+        style={{ objectPosition }}
         onError={() => setError(true)}
       />
     );
@@ -82,6 +88,7 @@ export default function SmartImage({
         className={`w-full h-full transition-transform duration-500 hover:scale-105 ${
           objectFit === 'contain' ? 'object-contain' : 'object-cover'
         } ${className}`}
+        style={{ objectPosition }}
         onError={() => setError(true)}
       />
     </div>

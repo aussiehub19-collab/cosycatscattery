@@ -106,7 +106,8 @@ export default function ShopClient() {
                 <SmartImage
                   src={product.images[0]}
                   alt={product.name}
-                  aspectRatio={product.imageAspect || '4/3'}
+                  aspectRatio="4/5"
+                  objectPosition="top"
                   className="group-hover:scale-105 transition-transform duration-500"
                 />
                 {product.badge && (
