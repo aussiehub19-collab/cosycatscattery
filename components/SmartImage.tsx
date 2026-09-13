@@ -26,13 +26,28 @@ export default function SmartImage({
   fill = false,
   sizes,
 }: SmartImageProps) {
+  // A failed image shows an empty frame, never a substitute stock photo —
+  // swapping in a different cat's photo when a real listing's image 404s
+  // would misrepresent what's actually for sale.
   const [error, setError] = useState(false);
-  const fallbackSrc = 'https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?q=80&w=1200&auto=format&fit=crop';
+
+  if (error) {
+    return (
+      <div
+        className={`flex items-center justify-center bg-slate-900 text-slate-600 text-xs w-full ${fill ? 'absolute inset-0' : ''} ${className}`}
+        style={fill ? undefined : { aspectRatio }}
+        role="img"
+        aria-label={alt || 'Image unavailable'}
+      >
+        Image unavailable
+      </div>
+    );
+  }
 
   if (fill) {
     return (
       <Image
-        src={error ? fallbackSrc : src}
+        src={src}
         alt={alt || 'Cosy Cats Cattery Maine Coon'}
         fill
         priority={priority}
@@ -51,7 +66,7 @@ export default function SmartImage({
       style={{ aspectRatio }}
     >
       <Image
-        src={error ? fallbackSrc : src}
+        src={src}
         alt={alt || 'Cosy Cats Cattery Maine Coon'}
         width={width}
         height={height}

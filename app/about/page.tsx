@@ -16,9 +16,9 @@ export const metadata: Metadata = {
     url: `https://${SITE.domain}/about/`,
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?q=80&w=1200&auto=format&fit=crop',
-        width: 1200,
-        height: 630,
+        url: `https://${SITE.domain}/images/hero/hero-2.webp`,
+        width: 1920,
+        height: 1280,
         alt: `${SITE.name} Canberra Nursery`,
       },
     ],
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: `About ${SITE.name} | Our Heritage & Standards`,
     description: `Pedigree Maine Coon breeding in Canberra, Australia.`,
-    images: ['https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?q=80&w=1200&auto=format&fit=crop'],
+    images: [`https://${SITE.domain}/images/hero/hero-2.webp`],
   },
   alternates: {
     canonical: `https://${SITE.domain}/about/`,
@@ -117,8 +117,8 @@ export default function AboutPage() {
           <div className="lg:col-span-6">
             <div className="relative rounded-3xl overflow-hidden border border-amber-500/30 p-2 bg-slate-900 shadow-2xl aspect-[4/3]">
               <SmartImage
-                src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?q=80&w=1200&auto=format&fit=crop"
-                alt={`${SITE.name} Queen resting in Canberra sunlight`}
+                src="/images/hero/hero-4.webp"
+                alt={`${SITE.name} Maine Coon resting on a cat tree`}
               />
             </div>
           </div>

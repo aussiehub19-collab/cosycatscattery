@@ -1,28 +1,39 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Shield, Check, X } from 'lucide-react';
 import { SITE } from '@/config/site';
 
 export default function CookieBanner() {
-  const [show, setShow] = useState(() => {
-    if (typeof window !== 'undefined') {
-      return !localStorage.getItem('cosy_cats_consent');
+  // Always matches SSR output (false) on first paint — consent state is read
+  // client-side only, after mount, to avoid a hydration mismatch.
+  const [show, setShow] = useState(false);
+
+  useEffect(() => {
+    try {
+      if (!localStorage.getItem('cosy_cats_consent')) {
+        // Intentional: hydrating visibility from localStorage has no
+        // SSR-safe synchronous alternative — this is the one-time mount
+        // read that avoids the hydration mismatch, not a state-sync loop.
+        // eslint-disable-next-line react-hooks/set-state-in-effect
+        setShow(true);
+      }
+    } catch {
+      // localStorage unavailable — leave banner hidden rather than throw
     }
-    return false;
-  });
+  }, []);
 
   const accept = () => {
-    if (typeof window !== 'undefined') {
+    try {
       localStorage.setItem('cosy_cats_consent', 'true');
-    }
+    } catch {}
     setShow(false);
   };
 
   const decline = () => {
-    if (typeof window !== 'undefined') {
+    try {
       localStorage.setItem('cosy_cats_consent', 'false');
-    }
+    } catch {}
     setShow(false);
   };
 

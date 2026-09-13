@@ -16,9 +16,9 @@ export const metadata: Metadata = {
     url: `https://${SITE.domain}/blog/`,
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?q=80&w=1200&auto=format&fit=crop',
-        width: 1200,
-        height: 630,
+        url: `https://${SITE.domain}/images/hero/hero-3.webp`,
+        width: 1920,
+        height: 1280,
         alt: `${SITE.name} Feline Knowledge Base`,
       },
     ],
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: `Maine Coon Knowledge & Care | ${SITE.name}`,
     description: `Expert guides on Maine Coon genetics and care in Australia.`,
-    images: ['https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?q=80&w=1200&auto=format&fit=crop'],
+    images: [`https://${SITE.domain}/images/hero/hero-3.webp`],
   },
   alternates: {
     canonical: `https://${SITE.domain}/blog/`,

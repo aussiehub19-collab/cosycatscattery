@@ -342,8 +342,8 @@ export default function HomePage() {
               <div className="space-y-4">
                 <div className="rounded-2xl overflow-hidden border border-slate-800 shadow-lg aspect-[4/3]">
                   <SmartImage
-                    src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?q=80&w=1200&auto=format&fit=crop"
-                    alt="Duchess Genevieve Queen Lineage"
+                    src="/images/hero/hero-3.webp"
+                    alt="Maine Coon kitten at play"
                   />
                 </div>
                 <div className="p-5 bg-slate-950 border border-slate-800 rounded-2xl space-y-2">
@@ -362,8 +362,8 @@ export default function HomePage() {
                 </div>
                 <div className="rounded-2xl overflow-hidden border border-slate-800 shadow-lg aspect-[4/3]">
                   <SmartImage
-                    src="https://images.unsplash.com/photo-1561948955-570b270e7c36?q=80&w=1200&auto=format&fit=crop"
-                    alt="Prince Thorin Polydactyl Maine Coon"
+                    src="/images/hero/hero-4.webp"
+                    alt="Maine Coon relaxing on a cat tree"
                   />
                 </div>
               </div>

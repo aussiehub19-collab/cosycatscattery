@@ -91,7 +91,6 @@ export default async function ProductDetailPage({
         url: `https://${SITE.domain}/shop/${product.slug}/`,
         priceCurrency: SITE.currency,
         price: product.price,
-        itemCondition: 'https://schema.org/NewCondition',
         availability: 'https://schema.org/InStock',
         seller: {
           '@type': 'Organization',

@@ -14,9 +14,9 @@ export const metadata: Metadata = {
     url: `https://${SITE.domain}/shop/`,
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1533738363-b7f9aef128ce?q=80&w=1200&auto=format&fit=crop',
-        width: 1200,
-        height: 630,
+        url: `https://${SITE.domain}/images/hero/hero-1.webp`,
+        width: 1920,
+        height: 1280,
         alt: `${SITE.name} Available Kittens`,
       },
     ],
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: `Available Pedigree Maine Coon Kittens | ${SITE.name}`,
     description: `Adopt champion European and American XXL Maine Coon kittens in Australia.`,
-    images: ['https://images.unsplash.com/photo-1533738363-b7f9aef128ce?q=80&w=1200&auto=format&fit=crop'],
+    images: [`https://${SITE.domain}/images/hero/hero-1.webp`],
   },
   alternates: {
     canonical: `https://${SITE.domain}/shop/`,

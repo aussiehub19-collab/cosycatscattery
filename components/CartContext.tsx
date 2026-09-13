@@ -22,26 +22,35 @@ interface CartContextType {
 const CartContext = createContext<CartContextType | undefined>(undefined);
 
 export function CartProvider({ children }: { children: React.ReactNode }) {
-  const [items, setItems] = useState<CartItem[]>(() => {
-    if (typeof window !== 'undefined') {
-      try {
-        const saved = localStorage.getItem(SITE.cartKey || 'mm-cart');
-        return saved ? JSON.parse(saved) : [];
-      } catch {
-        return [];
-      }
-    }
-    return [];
-  });
+  // Always starts empty — matches SSR output. Real cart contents are loaded
+  // from localStorage after mount (see effect below) to avoid a hydration
+  // mismatch for returning visitors with saved items.
+  const [items, setItems] = useState<CartItem[]>([]);
   const [isCartOpen, setIsCartOpen] = useState(false);
+  const [hydrated, setHydrated] = useState(false);
 
   useEffect(() => {
+    try {
+      const saved = localStorage.getItem(SITE.cartKey || 'mm-cart');
+      // Intentional: hydrating cart contents from localStorage has no
+      // SSR-safe synchronous alternative — this is the one-time mount
+      // read that avoids the hydration mismatch, not a state-sync loop.
+      // eslint-disable-next-line react-hooks/set-state-in-effect
+      if (saved) setItems(JSON.parse(saved));
+    } catch {
+      // ignore corrupt/unavailable storage
+    }
+    setHydrated(true);
+  }, []);
+
+  useEffect(() => {
+    if (!hydrated) return; // don't overwrite saved cart before it's loaded
     try {
       localStorage.setItem(SITE.cartKey || 'mm-cart', JSON.stringify(items));
     } catch (e) {
       console.warn('Failed to save cart to localStorage:', e);
     }
-  }, [items]);
+  }, [items, hydrated]);
 
   const addItem = (product: Omit<CartItem, 'quantity'>) => {
     setItems(prev => {

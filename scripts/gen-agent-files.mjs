@@ -47,8 +47,11 @@ async function run() {
           { key: 'Permissions-Policy', value: 'geolocation=(), microphone=(), camera=()' },
           {
             key: 'Content-Security-Policy',
+            // script-src keeps 'unsafe-inline' because Next.js App Router bootstraps
+            // hydration via inline scripts with no nonce configured — everything else
+            // is scoped to only the hosts this site actually calls.
             value:
-              "default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; connect-src 'self' https://api.web3forms.com https:; font-src 'self' data: https:;",
+              "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' https://api.web3forms.com; font-src 'self' data:;",
           },
           {
             key: 'Link',
@@ -147,6 +150,7 @@ async function run() {
   const robotsTxt = `User-agent: *
 Disallow: /thank-you-contact/
 Disallow: /thank-you-order/
+Disallow: /thank-you-wholesale/
 Sitemap: ${baseUrl}/sitemap.xml
 
 Content-Signal: search=yes, ai-input=yes, ai-train=no
