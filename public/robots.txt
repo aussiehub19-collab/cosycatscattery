@@ -2,6 +2,7 @@ User-agent: *
 Disallow: /thank-you-contact/
 Disallow: /thank-you-order/
 Disallow: /thank-you-wholesale/
+Disallow: /checkout/
 Sitemap: https://cosycatscattery.com.au/sitemap.xml
 
 Content-Signal: search=yes, ai-input=yes, ai-train=no

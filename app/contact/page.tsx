@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { Mail, Phone, MapPin, Send, MessageCircle, Clock, ShieldCheck, Crown } from 'lucide-react';
 import JsonLd from '@/components/JsonLd';
-import { SITE, CONTACT, FORMS } from '@/config/site';
+import { SITE, CONTACT } from '@/config/site';
 
 export default function ContactPage() {
   const [loading, setLoading] = useState(false);
@@ -14,27 +14,28 @@ export default function ContactPage() {
     setLoading(true);
     setErrorMsg(null);
     const form = e.currentTarget;
-    const key = (form.querySelector('[name="access_key"]') as HTMLInputElement)?.value;
-
+    const data = new FormData(form);
     const thankYouUrl = '/thank-you-contact/';
 
-    // Key-pending fallback
-    if (!key || key.startsWith('YOUR-') || key === 'pending') {
-      window.location.href = thankYouUrl;
-      return;
-    }
-
     try {
-      const res = await fetch('https://api.web3forms.com/submit', {
+      const res = await fetch('/api/contact', {
         method: 'POST',
-        headers: { Accept: 'application/json' },
-        body: new FormData(form),
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: data.get('name'),
+          email: data.get('email'),
+          phone: data.get('phone'),
+          location: data.get('location'),
+          interest: data.get('interest'),
+          message: data.get('message'),
+          botcheck: data.get('botcheck'),
+        }),
       });
-      const data = await res.json();
-      if (res.status === 200 && data.success) {
+      const json = await res.json();
+      if (res.ok && json.success) {
         window.location.href = thankYouUrl;
       } else {
-        throw new Error(data.message || 'Submission failed.');
+        throw new Error(json.message || 'Submission failed.');
       }
     } catch (err: any) {
       console.error(err);
@@ -162,10 +163,7 @@ export default function ContactPage() {
               )}
 
               <form onSubmit={handleSubmit} className="space-y-4">
-                <input type="hidden" name="access_key" value={FORMS.web3formsKey || ''} />
-                <input type="hidden" name="subject" value={`New Cattery Inquiry — ${SITE.name}`} />
-                <input type="hidden" name="from_name" value={`${SITE.name} Website`} />
-                <input type="checkbox" name="botcheck" className="hidden" style={{ display: 'none' }} />
+                <input type="checkbox" name="botcheck" className="hidden" style={{ display: 'none' }} tabIndex={-1} autoComplete="off" />
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="space-y-1">

@@ -1,42 +1,63 @@
 // app/api/contact/route.ts
 import { NextRequest, NextResponse } from 'next/server';
-import { CONTACT } from '@/config/site';
+import { SITE } from '@/config/site';
+import { sendMail, isMailerConfigured } from '@/lib/mailer';
 
 export const dynamic = 'force-dynamic';
+
+const CORS_HEADERS = { 'Access-Control-Allow-Origin': '*' };
 
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
-    const { name, email, phone, message, subject } = body;
+    const { name, email, phone, location, interest, message, botcheck } = body;
 
-    if (!name || !email) {
+    // Honeypot — a real visitor never fills this hidden field.
+    if (botcheck) {
+      return NextResponse.json({ success: true }, { headers: CORS_HEADERS });
+    }
+
+    if (!name || !email || !message) {
       return NextResponse.json(
-        { success: false, message: 'Name and email are required' },
-        { status: 400, headers: { 'Access-Control-Allow-Origin': '*' } }
+        { success: false, message: 'Name, email, and message are required' },
+        { status: 400, headers: CORS_HEADERS }
       );
     }
 
-    // In a live environment with RESEND_API_KEY, we could send via Resend.
-    // By default, we acknowledge and log safely.
-    console.log(`📨 Received adoption contact from ${name} (${email}): ${subject || 'Enquiry'}`);
+    if (!isMailerConfigured()) {
+      console.error('Contact form submission received but email is not configured:', { name, email });
+      return NextResponse.json(
+        { success: false, message: 'Email is not configured yet — please contact us via WhatsApp instead.' },
+        { status: 503, headers: CORS_HEADERS }
+      );
+    }
+
+    await sendMail({
+      subject: `New Cattery Inquiry — ${name}`,
+      replyTo: email,
+      text: [
+        `New contact form submission on ${SITE.name}`,
+        '',
+        `Name: ${name}`,
+        `Email: ${email}`,
+        `Phone: ${phone || '-'}`,
+        `Location: ${location || '-'}`,
+        `Interest: ${interest || '-'}`,
+        '',
+        'Message:',
+        message,
+      ].join('\n'),
+    });
 
     return NextResponse.json(
-      {
-        success: true,
-        message: 'Your enquiry has been received by our Canberra concierge.',
-        recipient: CONTACT.email,
-      },
-      {
-        headers: {
-          'Access-Control-Allow-Origin': '*',
-          'Content-Type': 'application/json',
-        },
-      }
+      { success: true, message: 'Your enquiry has been received by our Canberra concierge.' },
+      { headers: CORS_HEADERS }
     );
   } catch (error) {
+    console.error('Contact form error:', error);
     return NextResponse.json(
-      { success: false, message: 'Failed to process contact request' },
-      { status: 500, headers: { 'Access-Control-Allow-Origin': '*' } }
+      { success: false, message: 'Failed to send your enquiry. Please try again or contact us via WhatsApp.' },
+      { status: 500, headers: CORS_HEADERS }
     );
   }
 }
