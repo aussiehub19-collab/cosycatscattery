@@ -101,15 +101,21 @@ export default function ShopClient() {
             id={`product-card-${product.slug}`}
             className="bg-slate-900 border border-slate-800 hover:border-amber-500/40 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 flex flex-col group"
           >
-            <div className="relative aspect-[4/3] bg-slate-950 overflow-hidden">
+            <div className="relative aspect-[3/4] bg-slate-950 overflow-hidden">
               <SmartImage
                 src={product.images[0]}
                 alt={product.name}
+                objectFit="contain"
                 className="group-hover:scale-105 transition-transform duration-500"
               />
               {product.badge && (
                 <span className="absolute top-3 left-3 bg-gradient-to-r from-amber-500 to-amber-600 text-slate-950 text-[10px] font-extrabold uppercase px-2.5 py-1 rounded-full shadow-md">
                   {product.badge}
+                </span>
+              )}
+              {product.specs?.gender && (
+                <span className="absolute top-3 right-3 bg-slate-950/80 border border-slate-700 text-slate-200 text-[10px] font-bold uppercase px-2.5 py-1 rounded-full shadow-md backdrop-blur-sm">
+                  {product.specs.gender === 'Male' ? '♂ Male' : '♀ Female'}
                 </span>
               )}
             </div>

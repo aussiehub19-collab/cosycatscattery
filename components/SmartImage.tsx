@@ -13,6 +13,10 @@ interface SmartImageProps {
   aspectRatio?: string;
   fill?: boolean;
   sizes?: string;
+  /** 'cover' crops to fill the frame; 'contain' letterboxes to show the
+   * whole photo uncropped. Real animal photography (product/kitten cards)
+   * should use 'contain' so no part of the cat is cut off. */
+  objectFit?: 'cover' | 'contain';
 }
 
 export default function SmartImage({
@@ -25,6 +29,7 @@ export default function SmartImage({
   aspectRatio = '4/3',
   fill = false,
   sizes,
+  objectFit = 'cover',
 }: SmartImageProps) {
   // A failed image shows an empty frame, never a substitute stock photo —
   // swapping in a different cat's photo when a real listing's image 404s
@@ -54,7 +59,7 @@ export default function SmartImage({
         loading={priority ? 'eager' : 'lazy'}
         referrerPolicy="no-referrer"
         sizes={sizes || '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'}
-        className={`object-cover ${className}`}
+        className={`${objectFit === 'contain' ? 'object-contain' : 'object-cover'} ${className}`}
         onError={() => setError(true)}
       />
     );
@@ -74,7 +79,9 @@ export default function SmartImage({
         loading={priority ? 'eager' : 'lazy'}
         referrerPolicy="no-referrer"
         sizes={sizes || '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'}
-        className={`w-full h-full object-cover transition-transform duration-500 hover:scale-105 ${className}`}
+        className={`w-full h-full transition-transform duration-500 hover:scale-105 ${
+          objectFit === 'contain' ? 'object-contain' : 'object-cover'
+        } ${className}`}
         onError={() => setError(true)}
       />
     </div>

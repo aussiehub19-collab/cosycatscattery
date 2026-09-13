@@ -3,6 +3,7 @@ import { Crown, ShieldCheck, Plane, Award, Sparkles, Heart, CheckCircle2, ArrowR
 import SmartImage from '@/components/SmartImage';
 import JsonLd from '@/components/JsonLd';
 import TrustpilotReviews from '@/components/TrustpilotReviews';
+import HeroSlider from '@/components/HeroSlider';
 import { SITE, BRAND, PRODUCTS, POSTS, FAQ, CONTACT, SHOP, REVIEWS } from '@/config/site';
 
 export default function HomePage() {
@@ -103,10 +104,10 @@ export default function HomePage() {
       {/* Hero Section */}
       <section
         id="hero-section"
-        className="relative min-h-[75vh] flex items-center justify-center overflow-hidden bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 px-4 sm:px-6 lg:px-8 py-24 sm:py-32"
+        className="relative min-h-[75vh] flex items-center justify-center overflow-hidden bg-slate-950 px-4 sm:px-6 lg:px-8 py-24 sm:py-32"
       >
-        {/* Background Glow */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_35%,rgba(212,175,55,0.12),transparent_70%)] pointer-events-none" />
+        {/* Rotating real cattery photography with a scrim for text legibility */}
+        <HeroSlider />
 
         <div className="max-w-4xl mx-auto w-full text-center relative z-10 space-y-8">
           <div className="flex flex-wrap items-center justify-center gap-3">
@@ -140,11 +141,11 @@ export default function HomePage() {
           </div>
 
           {/* Exactly One H1 */}
-          <h1 className="font-serif text-3xl sm:text-5xl md:text-6xl font-bold text-white tracking-tight leading-[1.12]">
+          <h1 className="font-serif text-3xl sm:text-5xl md:text-6xl font-bold text-white tracking-tight leading-[1.12] [text-shadow:0_2px_16px_rgba(0,0,0,0.6)]">
             Australia’s Premier Breeder of Pedigree European & American <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-amber-400 to-amber-100">Maine Coon</span> Royalty
           </h1>
 
-          <p className="text-base sm:text-lg md:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl text-slate-200 max-w-3xl mx-auto leading-relaxed [text-shadow:0_1px_12px_rgba(0,0,0,0.7)]">
             We breed magnificent, heavy-boned Maine Coon kittens with lion-like manes, dramatic lynx ear tufts, and gentle affectionate temperaments. Reared cage-free in Canberra with 100% certified DNA clearance and nationwide flight concierge delivery.
           </p>
 
@@ -238,15 +239,21 @@ export default function HomePage() {
               key={product.slug}
               className="bg-slate-900 border border-slate-800 hover:border-amber-500/40 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 flex flex-col group"
             >
-              <div className="relative aspect-[4/3] bg-slate-950 overflow-hidden">
+              <div className="relative aspect-[3/4] bg-slate-950 overflow-hidden">
                 <SmartImage
                   src={product.images[0]}
                   alt={product.name}
+                  objectFit="contain"
                   className="group-hover:scale-105 transition-transform duration-500"
                 />
                 {product.badge && (
                   <span className="absolute top-3 left-3 bg-gradient-to-r from-amber-500 to-amber-600 text-slate-950 text-[10px] font-extrabold uppercase px-2.5 py-1 rounded-full shadow-md">
                     {product.badge}
+                  </span>
+                )}
+                {product.specs?.gender && (
+                  <span className="absolute top-3 right-3 bg-slate-950/80 border border-slate-700 text-slate-200 text-[10px] font-bold uppercase px-2.5 py-1 rounded-full shadow-md backdrop-blur-sm">
+                    {product.specs.gender === 'Male' ? '♂ Male' : '♀ Female'}
                   </span>
                 )}
               </div>

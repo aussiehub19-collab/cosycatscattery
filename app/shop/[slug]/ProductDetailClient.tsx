@@ -52,16 +52,21 @@ export default function ProductDetailClient({ product, relatedProducts }: Produc
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
         {/* Gallery */}
         <div className="lg:col-span-7 space-y-4">
-          <div className="relative aspect-[4/3] rounded-3xl overflow-hidden bg-slate-950 border border-slate-800 shadow-2xl">
+          <div className="relative aspect-[3/4] rounded-3xl overflow-hidden bg-slate-950 border border-slate-800 shadow-2xl">
             <SmartImage
               src={activeImage}
               alt={product.name}
               priority={true}
-              className="w-full h-full object-cover"
+              objectFit="contain"
             />
             {product.badge && (
               <span className="absolute top-4 left-4 bg-gradient-to-r from-amber-500 to-amber-600 text-slate-950 text-xs font-extrabold uppercase px-3 py-1.5 rounded-full shadow-lg">
                 {product.badge}
+              </span>
+            )}
+            {product.specs?.gender && (
+              <span className="absolute top-4 right-4 bg-slate-950/80 border border-slate-700 text-slate-200 text-xs font-bold uppercase px-3 py-1.5 rounded-full shadow-lg backdrop-blur-sm">
+                {product.specs.gender === 'Male' ? '♂ Male' : '♀ Female'}
               </span>
             )}
           </div>
@@ -74,11 +79,11 @@ export default function ProductDetailClient({ product, relatedProducts }: Produc
                   key={idx}
                   type="button"
                   onClick={() => setActiveImage(img)}
-                  className={`relative w-24 aspect-[4/3] rounded-xl overflow-hidden border-2 transition-all shrink-0 ${
+                  className={`relative w-24 aspect-[3/4] rounded-xl overflow-hidden border-2 transition-all shrink-0 ${
                     activeImage === img ? 'border-amber-400 shadow-md' : 'border-slate-800 opacity-60 hover:opacity-100'
                   }`}
                 >
-                  <SmartImage src={img} alt={`${product.name} view ${idx + 1}`} />
+                  <SmartImage src={img} alt={`${product.name} view ${idx + 1}`} objectFit="contain" />
                 </button>
               ))}
             </div>
@@ -88,9 +93,16 @@ export default function ProductDetailClient({ product, relatedProducts }: Produc
         {/* Product Details & Actions */}
         <div className="lg:col-span-5 space-y-6">
           <div>
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs font-semibold tracking-wider uppercase mb-3">
-              <Crown className="w-3.5 h-3.5 text-amber-400" />
-              <span>{product.category === 'kittens' ? 'Pedigree Champion Lineage' : 'Bespoke Feline Craft'}</span>
+            <div className="flex flex-wrap items-center gap-2 mb-3">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs font-semibold tracking-wider uppercase">
+                <Crown className="w-3.5 h-3.5 text-amber-400" />
+                <span>{product.category === 'kittens' ? 'Pedigree Champion Lineage' : 'Bespoke Feline Craft'}</span>
+              </div>
+              {product.specs?.gender && (
+                <span className="inline-flex items-center px-3 py-1 rounded-full bg-slate-900 border border-slate-700 text-slate-200 text-xs font-semibold uppercase">
+                  {product.specs.gender === 'Male' ? '♂ Male' : '♀ Female'}
+                </span>
+              )}
             </div>
 
             {/* Exactly One H1 */}
@@ -220,12 +232,18 @@ export default function ProductDetailClient({ product, relatedProducts }: Produc
               href={`/shop/${rel.slug}/`}
               className="bg-slate-900 border border-slate-800 hover:border-amber-500/40 rounded-2xl overflow-hidden p-4 group transition-all"
             >
-              <div className="aspect-[4/3] rounded-xl overflow-hidden relative bg-slate-950 mb-3">
+              <div className="aspect-[3/4] rounded-xl overflow-hidden relative bg-slate-950 mb-3">
                 <SmartImage
                   src={rel.images[0]}
                   alt={rel.name}
+                  objectFit="contain"
                   className="group-hover:scale-105 transition-transform duration-500"
                 />
+                {rel.specs?.gender && (
+                  <span className="absolute top-2 right-2 bg-slate-950/80 border border-slate-700 text-slate-200 text-[10px] font-bold uppercase px-2 py-0.5 rounded-full backdrop-blur-sm">
+                    {rel.specs.gender === 'Male' ? '♂' : '♀'}
+                  </span>
+                )}
               </div>
               <div className="space-y-1">
                 <span className="text-[11px] text-amber-400 font-bold">${rel.price.toLocaleString()} AUD</span>
