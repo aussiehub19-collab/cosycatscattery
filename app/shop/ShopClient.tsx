@@ -101,11 +101,11 @@ export default function ShopClient() {
             id={`product-card-${product.slug}`}
             className="bg-slate-900 border border-slate-800 hover:border-amber-500/40 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 flex flex-col group"
           >
-            <div className="relative aspect-[3/4] bg-slate-950 overflow-hidden">
+            <div className="relative bg-slate-950 overflow-hidden">
               <SmartImage
                 src={product.images[0]}
                 alt={product.name}
-                objectFit="contain"
+                aspectRatio={product.imageAspect || '4/3'}
                 className="group-hover:scale-105 transition-transform duration-500"
               />
               {product.badge && (

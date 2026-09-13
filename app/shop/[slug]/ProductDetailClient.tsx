@@ -52,12 +52,12 @@ export default function ProductDetailClient({ product, relatedProducts }: Produc
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
         {/* Gallery */}
         <div className="lg:col-span-7 space-y-4">
-          <div className="relative aspect-[3/4] rounded-3xl overflow-hidden bg-slate-950 border border-slate-800 shadow-2xl">
+          <div className="relative rounded-3xl overflow-hidden bg-slate-950 border border-slate-800 shadow-2xl">
             <SmartImage
               src={activeImage}
               alt={product.name}
               priority={true}
-              objectFit="contain"
+              aspectRatio={product.imageAspect || '4/3'}
             />
             {product.badge && (
               <span className="absolute top-4 left-4 bg-gradient-to-r from-amber-500 to-amber-600 text-slate-950 text-xs font-extrabold uppercase px-3 py-1.5 rounded-full shadow-lg">
@@ -79,11 +79,11 @@ export default function ProductDetailClient({ product, relatedProducts }: Produc
                   key={idx}
                   type="button"
                   onClick={() => setActiveImage(img)}
-                  className={`relative w-24 aspect-[3/4] rounded-xl overflow-hidden border-2 transition-all shrink-0 ${
+                  className={`relative w-24 rounded-xl overflow-hidden border-2 transition-all shrink-0 ${
                     activeImage === img ? 'border-amber-400 shadow-md' : 'border-slate-800 opacity-60 hover:opacity-100'
                   }`}
                 >
-                  <SmartImage src={img} alt={`${product.name} view ${idx + 1}`} objectFit="contain" />
+                  <SmartImage src={img} alt={`${product.name} view ${idx + 1}`} aspectRatio={product.imageAspect || '4/3'} />
                 </button>
               ))}
             </div>
@@ -232,11 +232,11 @@ export default function ProductDetailClient({ product, relatedProducts }: Produc
               href={`/shop/${rel.slug}/`}
               className="bg-slate-900 border border-slate-800 hover:border-amber-500/40 rounded-2xl overflow-hidden p-4 group transition-all"
             >
-              <div className="aspect-[3/4] rounded-xl overflow-hidden relative bg-slate-950 mb-3">
+              <div className="rounded-xl overflow-hidden relative bg-slate-950 mb-3">
                 <SmartImage
                   src={rel.images[0]}
                   alt={rel.name}
-                  objectFit="contain"
+                  aspectRatio={rel.imageAspect || '4/3'}
                   className="group-hover:scale-105 transition-transform duration-500"
                 />
                 {rel.specs?.gender && (

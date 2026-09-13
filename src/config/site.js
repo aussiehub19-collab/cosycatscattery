@@ -103,6 +103,7 @@ export const PRODUCTS = [
       color: 'Tortoiseshell / black-and-orange with tufted ears',
     },
     images: ['/images/kittens/bob.webp'],
+    imageAspect: '872/1080',
   },
   {
     slug: 'frayer-female-maine-coon-kitten',
@@ -118,6 +119,7 @@ export const PRODUCTS = [
       color: 'Silver tabby',
     },
     images: ['/images/kittens/frayer.webp'],
+    imageAspect: '876/1080',
   },
   {
     slug: 'luffy-male-maine-coon-kitten',
@@ -133,6 +135,7 @@ export const PRODUCTS = [
       color: 'Red / orange tabby',
     },
     images: ['/images/kittens/luffy.webp'],
+    imageAspect: '714/1080',
   },
   {
     slug: 'maya-female-maine-coon-kitten',
@@ -148,6 +151,7 @@ export const PRODUCTS = [
       color: 'Red / orange tabby with cream chest',
     },
     images: ['/images/kittens/maya.webp'],
+    imageAspect: '712/1080',
   },
   {
     slug: 'smokey-male-maine-coon-kitten-1',
@@ -163,6 +167,7 @@ export const PRODUCTS = [
       color: 'Brown tabby',
     },
     images: ['/images/kittens/smokey-1.webp'],
+    imageAspect: '862/1080',
   },
   {
     slug: 'smokey-male-maine-coon-kitten-2',
@@ -178,6 +183,7 @@ export const PRODUCTS = [
       color: 'Silver',
     },
     images: ['/images/kittens/smokey-2.webp'],
+    imageAspect: '842/1080',
   },
   {
     slug: 'snowball-female-maine-coon-kitten',
@@ -193,6 +199,7 @@ export const PRODUCTS = [
       color: 'Solid white',
     },
     images: ['/images/kittens/snowball.webp'],
+    imageAspect: '876/1080',
   },
   {
     slug: 'wolverine-male-maine-coon-kitten',
@@ -208,6 +215,7 @@ export const PRODUCTS = [
       color: 'Charcoal / dark grey tabby with white paws',
     },
     images: ['/images/kittens/wolverine.webp'],
+    imageAspect: '972/1080',
   },
   {
     slug: 'ziggy-male-maine-coon-kitten',
@@ -223,6 +231,7 @@ export const PRODUCTS = [
       color: 'Black-and-white tuxedo',
     },
     images: ['/images/kittens/ziggy.webp'],
+    imageAspect: '828/1080',
   },
   {
     slug: 'zo-male-maine-coon-kitten',
@@ -238,6 +247,7 @@ export const PRODUCTS = [
       color: 'Silver tabby',
     },
     images: ['/images/kittens/zo.webp'],
+    imageAspect: '852/1080',
   },
   {
     slug: 'monarch-grand-chateau-cat-castle',
