@@ -1,0 +1,31 @@
+# Cosy Cats Cattery
+
+> Australia's Premier Breeder of Pedigree European & American Maine Coon Royalty
+
+Cosy Cats Cattery is a boutique ethical cattery in Canberra breeding champion European & American line Maine Coon cats with comprehensive DNA health testing and pedigree certifications.
+
+## About & Ethical Pedigree Standards
+- Location: Canberra, Australian Capital Territory, Australia
+- Founding Year: 2018
+- Registry: ANCATS & TICA Registered Lineage
+- DNA Screening: 100% Negative/Clear for HCM, SMA, PKDef, and PKD
+- Delivery: VIP Climate-Controlled Flight & Courier Delivery Nationwide across Australia
+
+## Boutique Catalog & Offerings
+- [All Available Kittens & Royalty Catalog](https://cosycatscattery.com.au/shop/): Pedigree European & American Maine Coon kittens, solid timber chateaus, and grooming suites.
+- [About the Cattery & Bloodlines](https://cosycatscattery.com.au/about/): Heritage breeding, DNA protocols, and sensory nursery standards.
+- [Feline Knowledge & Breed Guides](https://cosycatscattery.com.au/blog/): Guides on Maine Coon nutrition, polydactyl traits, and genetic screenings.
+- [Frequently Asked Questions](https://cosycatscattery.com.au/faq/): Kitten reservation process, interstate flight travel, and health guarantees.
+- [Contact Concierge](https://cosycatscattery.com.au/contact/): Apply for adoption or schedule private Canberra consultation.
+- [Boutique Search](https://cosycatscattery.com.au/search/): Live search across kittens, care items, and feline care articles.
+
+## Payment & Reservation Terms
+- Accepted Methods: Direct Australian Bank Transfer (EFT) and instant PayID.
+- Order Rule: Human-in-the-loop reservation with verified adoption contract.
+- Shipping: Flat-rate/Free nationwide temperature-controlled VIP flight travel.
+
+## Optional & Agent Interfaces
+- [RFC 9727 API Catalog](https://cosycatscattery.com.au/.well-known/api-catalog): Discovered REST & MCP services.
+- [Agent Skills Registry](https://cosycatscattery.com.au/.well-known/agent-skills/index.json): High-level task execution capabilities.
+- [Model Context Protocol Server Card](https://cosycatscattery.com.au/.well-known/mcp/server-card.json): Live MCP Streamable HTTP endpoint.
+- [Authentication Policy](https://cosycatscattery.com.au/auth.md): Public read-only resource accessibility.

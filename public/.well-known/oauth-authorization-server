@@ -1,0 +1,30 @@
+{
+  "issuer": "https://cosycatscattery.com.au",
+  "authorization_endpoint": null,
+  "token_endpoint": null,
+  "jwks_uri": null,
+  "grant_types_supported": [],
+  "response_types_supported": [],
+  "scopes_supported": [],
+  "note": "Cosy Cats Cattery has no protected APIs. All resources publicly accessible.",
+  "public_resources": [
+    "https://cosycatscattery.com.au/shop/",
+    "https://cosycatscattery.com.au/blog/",
+    "https://cosycatscattery.com.au/faq/",
+    "https://cosycatscattery.com.au/about/",
+    "https://cosycatscattery.com.au/llms.txt",
+    "https://cosycatscattery.com.au/.well-known/api-catalog",
+    "https://cosycatscattery.com.au/.well-known/agent-skills/index.json",
+    "https://cosycatscattery.com.au/.well-known/mcp/server-card.json"
+  ],
+  "agent_auth": {
+    "register_uri": null,
+    "identity_types_supported": [
+      "none"
+    ],
+    "credential_types_supported": [
+      "none"
+    ],
+    "notes": "No registration required. All content publicly accessible to agents."
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "$schema": "https://agentskills.io/schema/v0.2.0/index.json",
+  "name": "Cosy Cats Cattery",
+  "url": "https://cosycatscattery.com.au",
+  "description": "Australia's Premier Breeder of Pedigree European & American Maine Coon Royalty",
+  "skills": [
+    {
+      "name": "search-products",
+      "type": "commerce",
+      "description": "Search available Maine Coon kittens, castles, and nutrition by keyword or price",
+      "url": "https://cosycatscattery.com.au/api/mcp",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "browse-catalog",
+      "type": "navigation",
+      "description": "Browse the full luxury Maine Coon catalog and available kittens",
+      "url": "https://cosycatscattery.com.au/shop/",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "order-draft",
+      "type": "commerce",
+      "description": "Create a prefilled kitten reservation or care draft. Human completes adoption.",
+      "url": "https://cosycatscattery.com.au/api/mcp",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "product-education",
+      "type": "content",
+      "description": "Educational articles on Maine Coon genetics, nutrition, and care",
+      "url": "https://cosycatscattery.com.au/blog/",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "contact",
+      "type": "support",
+      "description": "Contact Canberra cattery concierge for adoption enquiries",
+      "url": "https://cosycatscattery.com.au/contact/",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}

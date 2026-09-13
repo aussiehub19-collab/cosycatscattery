@@ -1,0 +1,117 @@
+{
+  "$schema": "https://modelcontextprotocol.io/schemas/server-card/v1.json",
+  "serverInfo": {
+    "name": "Cosy Cats Cattery",
+    "version": "1.0.0",
+    "description": "Cosy Cats Cattery is a boutique ethical cattery in Canberra breeding champion European & American line Maine Coon cats with comprehensive DNA health testing and pedigree certifications.",
+    "homepage": "https://cosycatscattery.com.au",
+    "contact": {
+      "email": "concierge@cosycatscattery.com.au",
+      "whatsapp": "+61400000000"
+    }
+  },
+  "transport": {
+    "type": "streamable-http",
+    "endpoint": "https://cosycatscattery.com.au/api/mcp"
+  },
+  "capabilities": {
+    "tools": [
+      {
+        "name": "search_products",
+        "description": "Search available Maine Coon kittens, castles, and nutrition by keyword, category, or max_price",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "query": {
+              "type": "string"
+            },
+            "category": {
+              "type": "string"
+            },
+            "max_price": {
+              "type": "number"
+            }
+          }
+        }
+      },
+      {
+        "name": "get_product",
+        "description": "Get full details for a specific kitten or care item by slug",
+        "inputSchema": {
+          "type": "object",
+          "required": [
+            "slug"
+          ],
+          "properties": {
+            "slug": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      {
+        "name": "list_categories",
+        "description": "List all boutique categories and collections",
+        "inputSchema": {
+          "type": "object",
+          "properties": {}
+        }
+      },
+      {
+        "name": "get_policies",
+        "description": "Get adoption guarantee, health screening, shipping, and payment policies",
+        "inputSchema": {
+          "type": "object",
+          "properties": {}
+        }
+      },
+      {
+        "name": "create_order_draft",
+        "description": "Create prefilled kitten reservation order URL. Human completes — never captures payment.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "items": {
+              "type": "array"
+            },
+            "notes": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    ],
+    "resources": [
+      {
+        "name": "product-catalog",
+        "description": "Full Maine Coon boutique catalog",
+        "uri": "https://cosycatscattery.com.au/shop/"
+      },
+      {
+        "name": "blog",
+        "description": "Educational Maine Coon care articles",
+        "uri": "https://cosycatscattery.com.au/blog/"
+      },
+      {
+        "name": "faq",
+        "description": "Adoption and health screening FAQ",
+        "uri": "https://cosycatscattery.com.au/faq/"
+      }
+    ],
+    "commerce": {
+      "ordering": "human-assisted-order-form",
+      "payment": [
+        "bank-transfer",
+        "pay-id"
+      ],
+      "currency": "AUD",
+      "minimumOrder": 0,
+      "freeShipping": "Free nationwide climate-controlled flight delivery"
+    }
+  },
+  "legal": {
+    "ageRestriction": "none",
+    "productType": "Pedigree Feline Companions & Care",
+    "compliance": "ANCATS & TICA Certified Pedigree Standards"
+  }
+}

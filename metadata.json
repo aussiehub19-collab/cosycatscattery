@@ -1,0 +1,6 @@
+{
+  "name": "Cosy Cats Cattery",
+  "description": "Australia's Premier Breeder of Pedigree European & American Maine Coon Cats and Luxury Feline Care.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

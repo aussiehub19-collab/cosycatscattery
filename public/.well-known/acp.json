@@ -1,0 +1,40 @@
+{
+  "protocol": {
+    "name": "acp",
+    "version": "0.1.0"
+  },
+  "name": "Cosy Cats Cattery",
+  "description": "Cosy Cats Cattery is a boutique ethical cattery in Canberra breeding champion European & American line Maine Coon cats with comprehensive DNA health testing and pedigree certifications.",
+  "api_base_url": "https://cosycatscattery.com.au",
+  "homepage": "https://cosycatscattery.com.au",
+  "transports": [
+    "https"
+  ],
+  "capabilities": {
+    "services": [
+      "product-catalog",
+      "blog",
+      "faq",
+      "mcp-server"
+    ],
+    "ordering": "human-assisted",
+    "payment_methods": [
+      "bank-transfer",
+      "pay-id"
+    ],
+    "currency": "AUD",
+    "minimum_order_usd": 0,
+    "free_shipping_threshold_usd": 0
+  },
+  "contact": {
+    "whatsapp": "https://wa.me/61400000000",
+    "email": "concierge@cosycatscattery.com.au"
+  },
+  "legal": {
+    "age_restriction": "none",
+    "region": "Australia",
+    "ships_to": "Australia-wide (All States & Territories)",
+    "product_type": "Pedigree Maine Coon Cats & Luxury Feline Care",
+    "compliance": "ANCATS Registered Ethical Breeder Standards"
+  }
+}
