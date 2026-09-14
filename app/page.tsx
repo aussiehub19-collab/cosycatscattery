@@ -51,6 +51,8 @@ export default function HomePage() {
         'Polydactyl Maine Coons',
       ],
       priceRange: '$$$$',
+      telephone: CONTACT.phone,
+      image: `https://${SITE.domain}/images/hero/hero-1.webp`,
       brand: {
         '@type': 'Brand',
         name: SITE.name,

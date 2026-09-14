@@ -87,7 +87,7 @@ export default async function BlogPostPage({
       headline: post.title,
       description: post.excerpt,
       image: post.image,
-      datePublished: post.date,
+      datePublished: `${post.date}T00:00:00+10:00`,
       dateModified: new Date().toISOString(),
       author: {
         '@type': 'Organization',

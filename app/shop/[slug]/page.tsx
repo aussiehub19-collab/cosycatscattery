@@ -96,6 +96,18 @@ export default async function ProductDetailPage({
           '@type': 'Organization',
           name: SITE.name,
         },
+        shippingDetails: {
+          '@type': 'OfferShippingDetails',
+          shippingRate: {
+            '@type': 'MonetaryAmount',
+            value: '0',
+            currency: SITE.currency,
+          },
+          shippingDestination: {
+            '@type': 'DefinedRegion',
+            addressCountry: 'AU',
+          },
+        },
       },
     },
     {
