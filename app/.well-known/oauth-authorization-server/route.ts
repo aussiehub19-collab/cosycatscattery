@@ -28,13 +28,13 @@ export async function GET() {
     ],
     agent_auth: {
       skill: `${baseUrl}/.well-known/agent-skills/index.json`,
-      register_uri: null,
+      register_uri: `${baseUrl}/.well-known/agent-skills/index.json`,
       identity_types_supported: ['anonymous'],
       anonymous: {
         credential_types_supported: ['none'],
-        claim_uri: null,
+        claim_uri: `${baseUrl}/`,
       },
-      notes: 'No registration or credential required. All content is served anonymously to any agent.',
+      notes: 'No registration or credential required — anonymous access begins immediately at claim_uri. register_uri points to the Agent Skills index since there is no real registration step to perform.',
     },
   };
 
