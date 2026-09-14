@@ -1,6 +1,18 @@
 import { MetadataRoute } from 'next';
 import { SITE, PRODUCTS, POSTS } from '@/config/site';
 
+// Next's sitemap serializer writes <image:loc> content as-is — it does not
+// resolve relative paths against the site origin, and does not XML-escape
+// "&" in query strings (both produced entries Google Search Console
+// rejected: 10 "Invalid URL" for the relative kitten photos, and a hard
+// XML parsing error at the first unescaped "&" in an Unsplash query string,
+// which halted parsing of everything after it — that's why 0 pages were
+// discovered even though the <url> entries themselves were fine).
+function toAbsoluteEscapedImageUrl(baseUrl: string, src: string): string {
+  const absolute = src.startsWith('http') ? src : `${baseUrl}${src}`;
+  return absolute.replace(/&/g, '&amp;');
+}
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = `https://${SITE.domain}`;
   const now = new Date();
@@ -63,7 +75,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: now,
     changeFrequency: 'daily',
     priority: 0.85,
-    images: product.images,
+    images: product.images.map(img => toAbsoluteEscapedImageUrl(baseUrl, img)),
   }));
 
   // Dynamic Blog routes
@@ -72,7 +84,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: now,
     changeFrequency: 'weekly',
     priority: 0.75,
-    images: [post.image],
+    images: [toAbsoluteEscapedImageUrl(baseUrl, post.image)],
   }));
 
   return [...staticRoutes, ...productRoutes, ...blogRoutes];
