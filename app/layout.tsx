@@ -11,7 +11,7 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL(`https://${SITE.domain}`),
-  title: `Maine Coon Kittens for Sale | ${SITE.name} — Canberra, AU`,
+  title: `Maine Coon Kittens for Sale | ${SITE.name}, Canberra`,
   description: `Maine Coon kittens for sale from ${SITE.name}, Canberra. ANCATS registered, DNA health certified, VIP flight delivery Australia-wide. Reserve yours today.`,
   openGraph: {
     type: 'website',
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   robots: 'index, follow',
   other: {
     'og:updated_time': new Date().toISOString(),
-    'google-site-verification': SITE.gscVerification || 'pending',
+    ...(SITE.gscVerification ? { 'google-site-verification': SITE.gscVerification } : {}),
   },
 };
 

@@ -9,7 +9,7 @@ export const SITE = {
   target: 'vercel',              // 'vercel' | 'static'
   primaryColor: '#0F172A',       // Royal Onyx Slate
   accentGold: '#D4AF37',         // Champagne Royal Gold
-  gscVerification: 'pending',
+  gscVerification: '', // Paste the Google Search Console <meta> content value here once verified. Leave empty until then — layout.tsx omits the tag rather than emitting a placeholder.
   indexNowKey: 'cosy-cats-indexnow-key',
   cartKey: 'mm-cart',            // localStorage key for cart
 };
@@ -97,6 +97,9 @@ export const PRODUCTS = [
     badge: 'Available Now',
     featured: true,
     shortDescription: 'Playful tortoiseshell-patterned Maine Coon male with tufted ears, currently available for reservation.',
+    metaTitle: 'Bob — Tortoiseshell Maine Coon Kitten',
+    colorLabel: 'Tortoiseshell',
+    metaDescription: 'Bob is a tortoiseshell Maine Coon kitten available now from Cosy Cats Cattery, Canberra. DNA-tested, ANCATS registered, flight delivery.',
     description: 'Bob is a Maine Coon kitten currently in our care and available for reservation. Contact our concierge for up-to-date age, health check, and pedigree documentation.',
     specs: {
       gender: 'Male',
@@ -113,6 +116,9 @@ export const PRODUCTS = [
     badge: 'Available Now',
     featured: true,
     shortDescription: 'Fluffy silver tabby Maine Coon female, currently available for reservation.',
+    metaTitle: 'Frayer — Silver Tabby Maine Coon Kitten',
+    colorLabel: 'Silver Tabby',
+    metaDescription: 'Frayer is a silver tabby Maine Coon kitten available now from Cosy Cats Cattery, Canberra. DNA-tested, ANCATS registered, flight delivery.',
     description: 'Frayer is a Maine Coon kitten currently in our care and available for reservation. Contact our concierge for up-to-date age, health check, and pedigree documentation.',
     specs: {
       gender: 'Female',
@@ -129,6 +135,9 @@ export const PRODUCTS = [
     badge: 'Available Now',
     featured: true,
     shortDescription: 'Striking red tabby Maine Coon male with dramatic lynx ear tufts, currently available for reservation.',
+    metaTitle: 'Luffy — Ginger Maine Coon Kitten',
+    colorLabel: 'Ginger',
+    metaDescription: 'Luffy is a ginger tabby Maine Coon kitten available now from Cosy Cats Cattery, Canberra. DNA-tested, ANCATS registered, flight delivery.',
     description: 'Luffy is a Maine Coon kitten currently in our care and available for reservation. Contact our concierge for up-to-date age, health check, and pedigree documentation.',
     specs: {
       gender: 'Male',
@@ -145,6 +154,9 @@ export const PRODUCTS = [
     badge: 'Available Now',
     featured: true,
     shortDescription: 'Bright-eyed red tabby Maine Coon female with a cream chest, currently available for reservation.',
+    metaTitle: 'Maya — Ginger Maine Coon Kitten',
+    colorLabel: 'Ginger',
+    metaDescription: 'Maya is a ginger tabby Maine Coon kitten available now from Cosy Cats Cattery, Canberra. DNA-tested, ANCATS registered, flight delivery.',
     description: 'Maya is a Maine Coon kitten currently in our care and available for reservation. Contact our concierge for up-to-date age, health check, and pedigree documentation.',
     specs: {
       gender: 'Female',
@@ -161,6 +173,9 @@ export const PRODUCTS = [
     badge: 'Available Now',
     featured: false,
     shortDescription: 'Fluffy brown tabby Maine Coon male, currently available for reservation.',
+    metaTitle: 'Smokey — Brown Tabby Maine Coon Kitten',
+    colorLabel: 'Brown Tabby',
+    metaDescription: 'Smokey is a brown tabby Maine Coon kitten available now from Cosy Cats Cattery, Canberra. DNA-tested, ANCATS registered, flight delivery.',
     description: 'Smokey is a Maine Coon kitten currently in our care and available for reservation. Contact our concierge for up-to-date age, health check, and pedigree documentation.',
     specs: {
       gender: 'Male',
@@ -177,6 +192,9 @@ export const PRODUCTS = [
     badge: 'Available Now',
     featured: false,
     shortDescription: 'Pale silver Maine Coon male, currently available for reservation.',
+    metaTitle: 'Smokey II — Silver Maine Coon Kitten',
+    colorLabel: 'Silver',
+    metaDescription: 'Smokey II is a silver Maine Coon kitten available now from Cosy Cats Cattery, Canberra. DNA-tested, ANCATS registered, flight delivery.',
     description: 'Smokey II is a Maine Coon kitten currently in our care and available for reservation. Contact our concierge for up-to-date age, health check, and pedigree documentation.',
     specs: {
       gender: 'Male',
@@ -193,6 +211,9 @@ export const PRODUCTS = [
     badge: 'Available Now',
     featured: true,
     shortDescription: 'Solid white Maine Coon female, currently available for reservation.',
+    metaTitle: 'Snowball — White Maine Coon Kitten',
+    colorLabel: 'Solid White',
+    metaDescription: 'Snowball is a solid white Maine Coon kitten available now from Cosy Cats Cattery, Canberra. DNA-tested, ANCATS registered, flight delivery.',
     description: 'Snowball is a Maine Coon kitten currently in our care and available for reservation. Contact our concierge for up-to-date age, health check, and pedigree documentation.',
     specs: {
       gender: 'Female',
@@ -209,6 +230,9 @@ export const PRODUCTS = [
     badge: 'Available Now',
     featured: false,
     shortDescription: 'Charcoal tabby Maine Coon male with white paws, currently available for reservation.',
+    metaTitle: 'Wolverine — Charcoal Maine Coon Kitten',
+    colorLabel: 'Charcoal Tabby',
+    metaDescription: 'Wolverine is a charcoal tabby Maine Coon kitten available now from Cosy Cats Cattery, Canberra. DNA-tested, ANCATS registered, flight delivery.',
     description: 'Wolverine is a Maine Coon kitten currently in our care and available for reservation. Contact our concierge for up-to-date age, health check, and pedigree documentation.',
     specs: {
       gender: 'Male',
@@ -225,6 +249,9 @@ export const PRODUCTS = [
     badge: 'Available Now',
     featured: false,
     shortDescription: 'Striking black-and-white tuxedo Maine Coon male, currently available for reservation.',
+    metaTitle: 'Ziggy — Tuxedo Maine Coon Kitten',
+    colorLabel: 'Tuxedo',
+    metaDescription: 'Ziggy is a black-and-white tuxedo Maine Coon kitten available now from Cosy Cats Cattery, Canberra. DNA-tested, ANCATS registered, flight delivery.',
     description: 'Ziggy is a Maine Coon kitten currently in our care and available for reservation. Contact our concierge for up-to-date age, health check, and pedigree documentation.',
     specs: {
       gender: 'Male',
@@ -241,6 +268,9 @@ export const PRODUCTS = [
     badge: 'Available Now',
     featured: false,
     shortDescription: 'Silver tabby Maine Coon male, currently available for reservation.',
+    metaTitle: 'Zo — Silver Tabby Maine Coon Kitten',
+    colorLabel: 'Silver Tabby',
+    metaDescription: 'Zo is a silver tabby Maine Coon kitten available now from Cosy Cats Cattery, Canberra. DNA-tested, ANCATS registered, flight delivery.',
     description: 'Zo is a Maine Coon kitten currently in our care and available for reservation. Contact our concierge for up-to-date age, health check, and pedigree documentation.',
     specs: {
       gender: 'Male',
@@ -257,6 +287,8 @@ export const PRODUCTS = [
     badge: 'Handcrafted in Australia',
     featured: true,
     shortDescription: 'Architectural heavy-duty solid Tasmanian Oak & sisal cat tree engineered specifically for heavyweight 12kg+ Maine Coons.',
+    metaTitle: 'Monarch Grand Chateau Cat Tower',
+    metaDescription: 'A heavy-duty solid Tasmanian Oak cat tower engineered for Maine Coons up to 35kg combined weight. Handcrafted in Australia, free delivery.',
     description: 'Standard pet store cat trees wobble or snap under the sheer weight and leaping velocity of adult Maine Coons. The Monarch Grand Chateau is custom handcrafted in Australia from 35mm solid kiln-dried Tasmanian Oak, featuring extra-wide 65cm cushioned observation platforms, 18cm diameter thick natural Brazilian sisal scratching pillars, and a reinforced weighted base that guarantees zero sway.',
     specs: {
       material: 'Solid Tasmanian Oak, 100% Natural 12mm Sisal Rope, Removable Washable Boucle Plush Pads',
@@ -278,6 +310,8 @@ export const PRODUCTS = [
     badge: 'Essential Care',
     featured: false,
     shortDescription: 'Professional 6-piece salon grooming arsenal crafted for long, dense Maine Coon double coats and ruffs.',
+    metaTitle: 'Royal Grooming Suite for Maine Coons',
+    metaDescription: 'A 6-piece professional grooming kit for Maine Coon double coats: slicker brush, undercoat rake, comb & detangling spray. Designed in Canberra.',
     description: 'Designed in collaboration with professional feline show groomers, this master kit includes an ergonomic self-cleaning rotating slicker, stainless steel butter comb, undercoat rake with safety rounded pins, silk finishing brush, organic Australian botanicals leave-in detangling spray, and claw care trimmer.',
     specs: {
       includes: 'Undercoat Rake, Dual-length Steel Comb, Slicker, 250ml Organic Silk Conditioning Spray, Trimmer, Luxury Leather Travel Case',
@@ -297,6 +331,8 @@ export const PRODUCTS = [
     badge: 'Breeder Formulated',
     featured: false,
     shortDescription: 'Freeze-dried raw kangaroo, free-range chicken, green-lipped mussel, and taurine blend for supreme joint and coat health.',
+    metaTitle: 'Holistic Giant Breed Nutrition Formula',
+    metaDescription: 'Freeze-dried raw kangaroo, chicken, green-lipped mussel and taurine formula for large-breed joint and coat health, from Cosy Cats Cattery.',
     description: 'Maine Coons take up to 4 to 5 full years to reach their mature skeletal and muscular size. This veterinary-backed nutrition complex combines premium Australian lean kangaroo protein, ground calcium bone meal, New Zealand green-lipped mussel for cartilage resilience, and cold-pressed salmon oil for lustrous coat density.',
     specs: {
       ingredients: '80% Human Grade Australian Kangaroo & Free-Range Poultry, 10% Organ & Bone, 10% Superfoods & Marine Collagen',
@@ -314,7 +350,8 @@ export const POSTS = [
   {
     slug: 'how-much-does-a-maine-coon-kitten-cost-in-australia',
     title: 'How Much Does a Maine Coon Kitten Cost in Australia? (2026 Price Guide)',
-    excerpt: 'What actually determines a Maine Coon kitten\'s price in Australia, typical price ranges, what should be included, and the red flags that mean a "bargain" price is too good to be true.',
+    metaTitle: 'Maine Coon Kitten Cost in Australia',
+    excerpt: 'What determines a Maine Coon kitten\'s price in Australia, typical price ranges, what\'s included, and red flags that mean a "bargain" is too good to be true.',
     category: 'Pricing & Buying',
     date: '2026-09-13',
     readTime: '6 min read',
@@ -352,7 +389,8 @@ Ready to see current pricing on real, available kittens? Browse our [current lit
   {
     slug: 'how-to-choose-a-maine-coon-breeder-australia',
     title: 'How to Choose a Reputable Maine Coon Breeder in Australia',
-    excerpt: 'The breeder matters more than the kitten in front of you. Here\'s exactly what to ask, what registration actually means, and the red flags of an unregistered or backyard operation.',
+    metaTitle: 'How to Choose a Maine Coon Breeder',
+    excerpt: 'The breeder matters more than the kitten. What to ask, what registration actually means, and red flags of an unregistered or backyard operation.',
     category: 'Pricing & Buying',
     date: '2026-09-06',
     readTime: '7 min read',
@@ -389,6 +427,7 @@ Have more questions? [Contact our concierge](/contact/) directly.
   {
     slug: 'maine-coon-grooming-guide',
     title: 'Maine Coon Grooming 101: How Often & How to Do It Right',
+    metaTitle: 'Maine Coon Grooming Guide',
     excerpt: 'Why Maine Coons need a real grooming routine, how often to brush and bathe, and the tools that actually make a difference on their long double coat.',
     category: 'Care & Welfare',
     date: '2026-08-30',
@@ -421,6 +460,7 @@ Shop the grooming kit built for this coat: [Royal Grooming Suite](/shop/royal-ve
   {
     slug: 'maine-coon-colours-and-coat-patterns',
     title: 'Maine Coon Colours & Coat Patterns Explained (Black, Ginger, Silver Tabby & More)',
+    metaTitle: 'Maine Coon Colours & Coat Patterns',
     excerpt: 'From solid black to silver tabby to tuxedo bicolour — what determines a Maine Coon\'s colour, which patterns are common versus rare, and how to tell them apart.',
     category: 'Colours & Appearance',
     date: '2026-08-23',
@@ -455,6 +495,7 @@ See our [currently available kittens by colour](/shop/) — every colour above i
   {
     slug: 'complete-maine-coon-breed-guide',
     title: 'The Complete Maine Coon Breed Guide: History, Traits & What Makes Them Different',
+    metaTitle: 'Complete Maine Coon Breed Guide',
     excerpt: 'What is a Maine Coon, where did they come from, and what actually separates European from American lines? A full breed primer in one place.',
     category: 'Breed Heritage',
     date: '2026-08-16',
@@ -495,6 +536,7 @@ Browse our current pedigree Maine Coon kittens: [Shop](/shop/).
   {
     slug: 'how-big-do-maine-coons-get',
     title: 'How Big Do Maine Coons Get? Size, Weight & Growth Timeline',
+    metaTitle: 'How Big Do Maine Coons Get?',
     excerpt: 'Average adult weight and length by gender, how long it takes a Maine Coon to reach full size, and what actually affects how big yours will grow.',
     category: 'Breed Heritage',
     date: '2026-08-09',
@@ -527,7 +569,8 @@ See our current available kittens from proven large-bodied lines: [Shop](/shop/)
   {
     slug: 'are-maine-coons-good-family-pets',
     title: 'Are Maine Coons Good Family Pets? Temperament, Kids & Other Animals',
-    excerpt: 'A full look at Maine Coon temperament — how they do with children, dogs, other cats, first-time owners, and whether they\'re suited to indoor or outdoor life in Australia.',
+    metaTitle: 'Are Maine Coons Good Family Pets?',
+    excerpt: 'A full look at Maine Coon temperament — how they do with children, dogs, other cats, and first-time owners in an Australian household.',
     category: 'Temperament & Behaviour',
     date: '2026-08-02',
     readTime: '7 min read',
@@ -565,6 +608,7 @@ Ready to meet your future Maine Coon? [Reserve a kitten](/shop/).
   {
     slug: 'is-my-cat-part-maine-coon',
     title: 'Is My Cat Part Maine Coon? How to Tell',
+    metaTitle: 'Is My Cat Part Maine Coon?',
     excerpt: 'A practical checklist of physical and temperament traits — plus why appearance alone can be misleading and what actually confirms Maine Coon ancestry.',
     category: 'Breed Heritage',
     date: '2026-07-26',
@@ -596,6 +640,7 @@ Looking for a documented pedigree Maine Coon instead? [See our available kittens
   {
     slug: 'maine-coon-myths-debunked',
     title: 'Maine Coon Myths: Can They Really Hurt You? (Behaviour Facts vs Fiction)',
+    metaTitle: 'Maine Coon Myths Debunked',
     excerpt: 'Addressing the internet\'s favourite Maine Coon myths head-on — are they dangerous, aggressive, or secretly part wildcat? Here are the facts.',
     category: 'Temperament & Behaviour',
     date: '2026-07-19',
@@ -626,6 +671,7 @@ Curious what a real Maine Coon temperament looks like? [Browse our available kit
   {
     slug: 'flying-a-maine-coon-kitten-to-sydney',
     title: 'Flying a Maine Coon Kitten to Sydney: What to Expect',
+    metaTitle: 'Flying a Maine Coon Kitten to Sydney',
     excerpt: 'A straightforward look at how VIP flight delivery from our Canberra cattery to Sydney actually works, from booking to touchdown.',
     category: 'Delivery & Logistics',
     date: '2026-07-12',
@@ -657,6 +703,7 @@ Ready to arrange Sydney delivery? [Contact our concierge](/contact/) with your p
   {
     slug: 'maine-coon-kittens-for-sale-in-melbourne',
     title: 'Maine Coon Kittens for Sale in Melbourne: Delivery, Pricing & What to Know',
+    metaTitle: 'Maine Coon Kittens for Sale, Melbourne',
     excerpt: 'Everything a Melbourne-based buyer needs to know about reserving a Maine Coon kitten from an interstate cattery, including honest delivery logistics.',
     category: 'Delivery & Logistics',
     date: '2026-07-05',
@@ -688,6 +735,7 @@ See current kittens available for Melbourne delivery: [Shop](/shop/), or [contac
   {
     slug: 'maine-coon-delivery-brisbane-perth-adelaide',
     title: 'Maine Coon Kitten Delivery: Brisbane, Perth, Adelaide, Hobart & Darwin',
+    metaTitle: 'Maine Coon Delivery: Brisbane to Darwin',
     excerpt: 'How nationwide VIP flight delivery works for buyers outside the major east-coast corridor, honestly explained city by city.',
     category: 'Delivery & Logistics',
     date: '2026-06-28',
@@ -725,6 +773,7 @@ Wherever you are in Australia, [browse available kittens](/shop/) or [contact ou
   {
     slug: 'maine-coon-vs-other-large-cat-breeds',
     title: 'Maine Coon vs Other Large Cat Breeds: How They Actually Compare',
+    metaTitle: 'Maine Coon vs Other Large Cat Breeds',
     excerpt: 'Maine Coon, Ragdoll, Norwegian Forest Cat, Siberian — how these popular large breeds actually differ in size, coat, and temperament.',
     category: 'Breed Heritage',
     date: '2026-06-21',
@@ -756,6 +805,7 @@ See our current pedigree Maine Coon kittens: [Shop](/shop/).
   {
     slug: 'maine-coon-kitten-checklist-before-you-bring-them-home',
     title: 'Maine Coon Kitten Checklist: What to Prepare Before Your Kitten Arrives',
+    metaTitle: 'Maine Coon Kitten Checklist',
     excerpt: 'From XXL litter trays to sturdy scratching posts — the practical setup checklist for bringing home a breed that keeps growing for years.',
     category: 'Care & Welfare',
     date: '2026-06-14',
@@ -793,6 +843,7 @@ Ready to bring one home? [See available kittens](/shop/).
   {
     slug: 'european-vs-american-maine-coon',
     title: 'European vs American Maine Coon: What\'s the Real Difference?',
+    metaTitle: 'European vs American Maine Coon',
     excerpt: 'Same breed, two bloodline traditions — how European and American Maine Coon lines actually differ in look and why neither is "more authentic."',
     category: 'Breed Heritage',
     date: '2026-06-07',
@@ -827,6 +878,7 @@ Curious about the lines behind our own cattery? [Contact us](/contact/) directly
   {
     slug: 'complete-guide-to-raising-a-maine-coon-in-australia',
     title: 'The Comprehensive Guide to Raising a Maine Coon in Australia: Climate, Nutrition & Space',
+    metaTitle: 'Raising a Maine Coon in Australia',
     excerpt: 'Everything you must know about caring for the gentle giant of the cat world in Australian climates, from summer grooming to dietary bone development.',
     category: 'Care & Welfare',
     date: '2025-02-15',
@@ -858,6 +910,7 @@ At Cosy Cats Cattery, all our kittens are born and raised in purpose-designed fa
   {
     slug: 'understanding-maine-coon-dna-testing-hcm-sma-pkdef',
     title: 'Why 100% DNA Health Testing Matters: HCM, SMA and PKDef Explained',
+    metaTitle: 'Maine Coon DNA Testing Explained',
     excerpt: 'A deep dive into genetic screening for Maine Coon heart and spinal conditions, and how ethical Australian breeding preserves breed longevity.',
     category: 'Genetics & Health',
     date: '2025-01-20',
@@ -878,6 +931,7 @@ Every kitten adopted from Cosy Cats Cattery is accompanied by written genetic cl
   {
     slug: 'polydactyl-maine-coons-history-and-characteristics',
     title: 'The Legend of Polydactyl Maine Coons: Extra Toes, Superb Balance & Heritage',
+    metaTitle: 'Polydactyl Maine Coons Explained',
     excerpt: 'Discover why historic Maine Coons possessed extra toes, and why these gentle mitten-pawed giants remain one of the most sought-after pedigrees.',
     category: 'Breed Heritage',
     date: '2024-12-10',

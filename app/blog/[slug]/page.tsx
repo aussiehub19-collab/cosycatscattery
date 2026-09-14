@@ -26,7 +26,7 @@ export async function generateMetadata({
     };
   }
 
-  const title = `${post.title} | ${SITE.name}`;
+  const title = `${post.metaTitle || post.title} | ${SITE.name}`;
   const description = post.excerpt;
 
   return {
@@ -75,7 +75,9 @@ export default async function BlogPostPage({
     notFound();
   }
 
-  const otherPosts = POSTS.filter(p => p.slug !== post.slug).slice(0, 2);
+  const sameCategory = POSTS.filter(p => p.slug !== post.slug && p.category === post.category);
+  const otherCategory = POSTS.filter(p => p.slug !== post.slug && p.category !== post.category);
+  const otherPosts = [...sameCategory, ...otherCategory].slice(0, 2);
   const featuredKittens = PRODUCTS.filter(p => p.category === 'kittens').slice(0, 2);
 
   const blogPostSchema = [

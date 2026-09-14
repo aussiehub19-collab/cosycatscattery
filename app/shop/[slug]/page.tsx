@@ -23,8 +23,8 @@ export async function generateMetadata({
     };
   }
 
-  const title = `${product.name} | ${SITE.name}`;
-  const description = `${product.shortDescription} DNA tested clear, ANCATS registered, nationwide flight delivery.`;
+  const title = `${product.metaTitle || product.name} | ${SITE.name}`;
+  const description = product.metaDescription || `${product.shortDescription} DNA tested clear, ANCATS registered, nationwide flight delivery.`;
 
   return {
     title,

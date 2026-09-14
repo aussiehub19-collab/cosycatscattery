@@ -109,6 +109,9 @@ export default function ProductDetailClient({ product, relatedProducts }: Produc
             <h1 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-white tracking-tight">
               {product.name}
             </h1>
+            {product.colorLabel && (
+              <p className="mt-1 text-sm text-amber-200/80 font-medium">{product.colorLabel} Maine Coon {product.specs?.gender?.toLowerCase()} kitten</p>
+            )}
 
             <div className="mt-4 flex items-baseline gap-3">
               <span className="text-3xl font-bold text-amber-300 font-serif">
@@ -217,6 +220,22 @@ export default function ProductDetailClient({ product, relatedProducts }: Produc
             <p>• Heavyweight feather wand & sensory toys</p>
             <p>• Lifetime 24/7 breeder guidance concierge</p>
           </div>
+        </div>
+      </div>
+
+      {/* Learn More — cross-link to educational guides */}
+      <div className="bg-slate-900/40 border border-slate-800 rounded-3xl p-6 sm:p-8 space-y-4">
+        <h2 className="font-serif text-lg font-bold text-white">Learn More Before You Reserve</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
+          <Link href="/blog/maine-coon-colours-and-coat-patterns/" className="p-4 bg-slate-950 border border-slate-800 hover:border-amber-500/40 rounded-xl text-slate-300 hover:text-amber-300 transition-colors">
+            Maine Coon Colours &amp; Coat Patterns Guide
+          </Link>
+          <Link href="/blog/maine-coon-grooming-guide/" className="p-4 bg-slate-950 border border-slate-800 hover:border-amber-500/40 rounded-xl text-slate-300 hover:text-amber-300 transition-colors">
+            Maine Coon Grooming 101
+          </Link>
+          <Link href="/blog/understanding-maine-coon-dna-testing-hcm-sma-pkdef/" className="p-4 bg-slate-950 border border-slate-800 hover:border-amber-500/40 rounded-xl text-slate-300 hover:text-amber-300 transition-colors">
+            Understanding Our DNA Health Testing
+          </Link>
         </div>
       </div>
 
