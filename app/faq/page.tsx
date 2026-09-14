@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { HelpCircle, ArrowRight, ShieldCheck, Plane, Heart, Award } from 'lucide-react';
 import JsonLd from '@/components/JsonLd';
+import FaqAccordion from '@/components/FaqAccordion';
 import { FAQ, SITE, CONTACT } from '@/config/site';
 
 export const metadata: Metadata = {
@@ -82,23 +83,8 @@ export default function FaqPage() {
           </p>
         </div>
 
-        {/* FAQ Grid */}
-        <div className="space-y-4">
-          {FAQ.map((item, idx) => (
-            <div
-              key={idx}
-              className="p-6 bg-slate-900 border border-slate-800 rounded-2xl space-y-3 hover:border-amber-500/40 transition-colors shadow-lg"
-            >
-              <h2 className="font-serif text-base sm:text-lg font-bold text-amber-200 flex items-start gap-3">
-                <span className="text-amber-400 font-serif text-lg shrink-0">Q.</span>
-                <span>{item.question}</span>
-              </h2>
-              <p className="text-xs sm:text-sm text-slate-300 pl-6 leading-relaxed">
-                {item.answer}
-              </p>
-            </div>
-          ))}
-        </div>
+        {/* FAQ Accordion */}
+        <FaqAccordion items={FAQ} variant="page" />
 
         {/* Contact Strip */}
         <div className="p-8 rounded-2xl bg-gradient-to-r from-slate-900 via-amber-950/30 to-slate-900 border border-amber-500/30 text-center space-y-4">

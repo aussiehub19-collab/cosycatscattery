@@ -1,9 +1,10 @@
 import Link from 'next/link';
-import { Crown, ShieldCheck, Plane, Award, Sparkles, Heart, CheckCircle2, ArrowRight, Star, BookOpen, HelpCircle } from 'lucide-react';
+import { Crown, ShieldCheck, Plane, Award, Sparkles, Heart, CheckCircle2, ArrowRight, Star, BookOpen } from 'lucide-react';
 import SmartImage from '@/components/SmartImage';
 import JsonLd from '@/components/JsonLd';
 import TrustpilotReviews from '@/components/TrustpilotReviews';
 import HeroSlider from '@/components/HeroSlider';
+import FaqAccordion from '@/components/FaqAccordion';
 import { SITE, BRAND, PRODUCTS, POSTS, FAQ, CONTACT, SHOP, REVIEWS } from '@/config/site';
 
 export default function HomePage() {
@@ -453,22 +454,7 @@ export default function HomePage() {
             </h2>
           </div>
 
-          <div className="space-y-4">
-            {FAQ.map((item, idx) => (
-              <div
-                key={idx}
-                className="p-5 bg-slate-950 border border-slate-800 rounded-xl space-y-2 hover:border-amber-500/30 transition-colors"
-              >
-                <h3 className="font-serif text-base font-bold text-amber-200 flex items-start gap-2.5">
-                  <HelpCircle className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" />
-                  <span>{item.question}</span>
-                </h3>
-                <p className="text-xs sm:text-sm text-slate-300 pl-7.5 leading-relaxed">
-                  {item.answer}
-                </p>
-              </div>
-            ))}
-          </div>
+          <FaqAccordion items={FAQ.slice(0, 5)} variant="compact" />
 
           <div className="text-center pt-6">
             <p className="text-xs text-slate-400 mb-3">
