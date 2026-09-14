@@ -11,12 +11,12 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL(`https://${SITE.domain}`),
-  title: `${SITE.name} | Pedigree European & American Maine Coon Royalty`,
-  description: `${BRAND.description} DNA health certified, ANCATS registered, nationwide flight delivery across Australia.`,
+  title: `Maine Coon Kittens for Sale | ${SITE.name} — Canberra, AU`,
+  description: `Maine Coon kittens for sale from ${SITE.name}, Canberra. ANCATS registered, DNA health certified, VIP flight delivery Australia-wide. Reserve yours today.`,
   openGraph: {
     type: 'website',
     siteName: SITE.name,
-    title: `${SITE.name} | Australia's Premier Maine Coon Breeder`,
+    title: `Maine Coon Kittens for Sale | ${SITE.name}`,
     description: `${BRAND.description} Certified DNA negative parents, 2-year genetic health guarantee.`,
     url: `https://${SITE.domain}/`,
     images: [
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: `${SITE.name} | Luxury Pedigree Maine Coons Australia`,
+    title: `Maine Coon Kittens for Sale | ${SITE.name}`,
     description: `${BRAND.description}`,
     images: [`https://${SITE.domain}/images/hero/hero-1.webp`],
   },

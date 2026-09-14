@@ -1,9 +1,10 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import { ArrowLeft, Clock, Calendar, ArrowRight, ShieldCheck, Crown } from 'lucide-react';
+import { ArrowLeft, Clock, Calendar } from 'lucide-react';
 import SmartImage from '@/components/SmartImage';
 import JsonLd from '@/components/JsonLd';
+import MarkdownContent from '@/components/MarkdownContent';
 import { POSTS, SITE, PRODUCTS } from '@/config/site';
 
 export async function generateStaticParams() {
@@ -168,7 +169,7 @@ export default async function BlogPostPage({
               {post.readTime}
             </span>
             <span>•</span>
-            <span>By Canberra Breeding Team</span>
+            <span>By {post.author}</span>
           </div>
         </div>
 
@@ -183,34 +184,7 @@ export default async function BlogPostPage({
             {post.excerpt}
           </p>
 
-          <h2 className="font-serif text-2xl font-bold text-white pt-4">
-            Essential Biological Understandings
-          </h2>
-          <p>
-            The Maine Coon is one of the oldest natural breeds in North America and has evolved robust physical adaptations to withstand harsh sub-zero winter climates. From their water-resistant triple coat to the heavy tufting between their large paws that function as natural snowshoes, understanding these biological traits is crucial for providing optimal feline husbandry.
-          </p>
-          <p>
-            Unlike typical domestic cats that reach full skeletal maturity between 9 and 12 months, purebred Maine Coons undergo an extended 4-to-5 year growth cycle. This gradual development requires targeted nutritional support rich in animal protein, glucosamine, chondroitin, and balanced calcium-to-phosphorus ratios to support robust bone density without stressing juvenile joints.
-          </p>
-
-          <h2 className="font-serif text-2xl font-bold text-white pt-4">
-            Genetic Health Screening: What Every Australian Owner Must Know
-          </h2>
-          <p>
-            At {SITE.name}, all foundation stud and queen lines undergo international DNA assay testing to confirm negative status for feline Hypertrophic Cardiomyopathy (HCM A31P mutation), Spinal Muscular Atrophy (SMA), and Pyruvate Kinase Deficiency (PKDef). Annual echocardiograms conducted by veterinary cardiologists ensure heart health throughout each cat&apos;s lifetime.
-          </p>
-
-          <div className="my-8 p-6 rounded-2xl bg-gradient-to-r from-slate-900 via-amber-950/30 to-slate-900 border border-amber-500/30 space-y-3">
-            <h3 className="font-serif text-lg font-bold text-amber-300 flex items-center gap-2">
-              <ShieldCheck className="w-5 h-5 text-amber-400" />
-              <span>Breeder Recommendation Checklist</span>
-            </h3>
-            <ul className="text-xs sm:text-sm text-slate-300 space-y-1.5 list-disc pl-5">
-              <li>Always demand written N/N DNA certificates of both parents before placing a deposit.</li>
-              <li>Ensure your kitten remains with the queen until at least 12 to 14 weeks for emotional stability.</li>
-              <li>Provide heavy-duty solid timber scratchers to accommodate adult weights exceeding 9–11 kg.</li>
-            </ul>
-          </div>
+          <MarkdownContent content={post.content} />
         </div>
 
         {/* Related Kittens In Need of Loving Homes */}

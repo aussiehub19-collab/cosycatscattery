@@ -6,8 +6,8 @@ import JsonLd from '@/components/JsonLd';
 import { SITE, POSTS } from '@/config/site';
 
 export const metadata: Metadata = {
-  title: `Maine Coon Knowledge, Health & Genetics Guides | ${SITE.name}`,
-  description: `Expert articles on Maine Coon cat care, European vs American bloodline differences, raw nutrition protocols, and genetic health testing in Australia.`,
+  title: `Maine Coon Breed Guides, Care & Buying Advice | ${SITE.name}`,
+  description: `Everything about the Maine Coon breed: temperament, size, colours, grooming, pricing, and how to choose a breeder in Australia — from our Canberra cattery.`,
   openGraph: {
     type: 'website',
     siteName: SITE.name,

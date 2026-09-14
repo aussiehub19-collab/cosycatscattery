@@ -4,13 +4,13 @@ import JsonLd from '@/components/JsonLd';
 import ShopClient from './ShopClient';
 
 export const metadata: Metadata = {
-  title: `Available Maine Coon Kittens & Royal Care | ${SITE.name}`,
-  description: `Browse certified pedigree European and American Maine Coon kittens, solid timber castles, and nutrition complexes in Australia with 100% DNA health guarantee.`,
+  title: `Maine Coon Kittens for Sale Australia | ${SITE.name}`,
+  description: `Browse available Maine Coon kittens for sale across Australia. DNA-tested, ANCATS registered, nationwide flight delivery from our Canberra cattery.`,
   openGraph: {
     type: 'website',
     siteName: SITE.name,
-    title: `Available Pedigree Maine Coon Kittens | ${SITE.name}`,
-    description: `Adopt champion European and American XXL Maine Coon kittens in Australia. Free nationwide climate-controlled flight delivery.`,
+    title: `Maine Coon Kittens for Sale Australia | ${SITE.name}`,
+    description: `Browse available Maine Coon kittens for sale across Australia. DNA-tested, ANCATS registered, nationwide flight delivery.`,
     url: `https://${SITE.domain}/shop/`,
     images: [
       {
@@ -23,8 +23,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: `Available Pedigree Maine Coon Kittens | ${SITE.name}`,
-    description: `Adopt champion European and American XXL Maine Coon kittens in Australia.`,
+    title: `Maine Coon Kittens for Sale Australia | ${SITE.name}`,
+    description: `Browse available Maine Coon kittens for sale across Australia.`,
     images: [`https://${SITE.domain}/images/hero/hero-1.webp`],
   },
   alternates: {

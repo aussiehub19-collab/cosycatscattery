@@ -5,19 +5,19 @@ import JsonLd from '@/components/JsonLd';
 import { FAQ, SITE, CONTACT } from '@/config/site';
 
 export const metadata: Metadata = {
-  title: `Frequently Asked Questions | ${SITE.name}`,
-  description: `Common questions regarding Maine Coon adoption procedures, national flight transport across Australia, DNA testing protocols, and lifetime breeder support.`,
+  title: `How Much Is a Maine Coon Kitten? FAQ | ${SITE.name}`,
+  description: `How much is a Maine Coon kitten in Australia? Answers on pricing, adoption process, DNA health testing, flight delivery, temperament, and more.`,
   openGraph: {
     type: 'website',
     siteName: SITE.name,
-    title: `Maine Coon Adoption FAQ | ${SITE.name}`,
-    description: `Answers to adoption, flight transport, and pedigree certification questions for Maine Coons in Australia.`,
+    title: `Maine Coon Price & Adoption FAQ | ${SITE.name}`,
+    description: `Pricing, adoption process, flight transport, and pedigree certification questions for Maine Coons in Australia, answered.`,
     url: `https://${SITE.domain}/faq/`,
   },
   twitter: {
     card: 'summary_large_image',
-    title: `Maine Coon FAQ | ${SITE.name}`,
-    description: `Adoption, health, and transport FAQ.`,
+    title: `Maine Coon Price & Adoption FAQ | ${SITE.name}`,
+    description: `Pricing, adoption, health, and transport FAQ.`,
   },
   alternates: {
     canonical: `https://${SITE.domain}/faq/`,

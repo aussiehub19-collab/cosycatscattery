@@ -6,8 +6,8 @@ import JsonLd from '@/components/JsonLd';
 import { SITE, BRAND, CONTACT } from '@/config/site';
 
 export const metadata: Metadata = {
-  title: `About ${SITE.name} | Ethical Pedigree Breeder Heritage`,
-  description: `Discover the Canberra heritage of ${SITE.name}. ANCATS registered breeder of purebred European and American Maine Coons with 100% DNA health clearance.`,
+  title: `About ${SITE.name} | Registered Maine Coon Breeders, Canberra`,
+  description: `${SITE.name} is a registered Maine Coon cattery and breeder in Canberra, Australia. ANCATS registered, 100% DNA health tested, ethical cage-free breeding.`,
   openGraph: {
     type: 'website',
     siteName: SITE.name,
