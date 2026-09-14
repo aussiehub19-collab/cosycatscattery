@@ -4,10 +4,10 @@ import { useEffect, useState, useSyncExternalStore } from 'react';
 import Image from 'next/image';
 
 const SLIDES = [
-  '/images/hero/hero-1.webp',
-  '/images/hero/hero-2.webp',
-  '/images/hero/hero-3.webp',
-  '/images/hero/hero-4.webp',
+  { src: '/images/hero/hero-1.webp', alt: 'Pedigree Maine Coon kitten, Cosy Cats Cattery Canberra' },
+  { src: '/images/hero/hero-2.webp', alt: 'Cosy Cats Cattery Canberra nursery' },
+  { src: '/images/hero/hero-3.webp', alt: 'Maine Coon kitten at play' },
+  { src: '/images/hero/hero-4.webp', alt: 'Maine Coon relaxing on a cat tree' },
 ];
 
 function subscribeReducedMotion(callback: () => void) {
@@ -40,11 +40,11 @@ export default function HeroSlider() {
 
   return (
     <div className="absolute inset-0" aria-hidden="true">
-      {SLIDES.map((src, idx) => (
+      {SLIDES.map(({ src, alt }, idx) => (
         <Image
           key={src}
           src={src}
-          alt=""
+          alt={alt}
           fill
           priority={idx === 0}
           loading={idx === 0 ? 'eager' : 'lazy'}

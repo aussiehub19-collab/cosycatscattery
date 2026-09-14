@@ -73,13 +73,10 @@ export default async function middleware(request: NextRequest) {
     const markdown = toMarkdown(url.pathname);
     if (markdown) {
       const tokenEstimate = Math.ceil(markdown.length / 4);
-      return new NextResponse(markdown, {
-        status: 200,
-        headers: {
-          'Content-Type': 'text/markdown; charset=utf-8',
-          'x-markdown-tokens': String(tokenEstimate),
-        },
-      });
+      const response = new NextResponse(markdown, { status: 200 });
+      response.headers.set('Content-Type', 'text/markdown; charset=utf-8');
+      response.headers.set('x-markdown-tokens', String(tokenEstimate));
+      return response;
     }
   }
 
