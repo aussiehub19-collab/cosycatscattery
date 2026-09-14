@@ -48,6 +48,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang={SITE.locale} className="bg-slate-950 text-slate-100 antialiased">
       <head>
+        <link rel="ai-catalog" href="/.well-known/ai-catalog.json" />
         <script src="/js/webmcp.js" defer />
       </head>
       <body suppressHydrationWarning className="bg-slate-950 min-h-screen flex flex-col selection:bg-amber-500/30 selection:text-amber-200">

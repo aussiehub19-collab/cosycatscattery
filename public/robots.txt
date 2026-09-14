@@ -4,6 +4,7 @@ Disallow: /thank-you-order/
 Disallow: /thank-you-wholesale/
 Disallow: /checkout/
 Sitemap: https://cosycatscattery.com.au/sitemap.xml
+Agentmap: https://cosycatscattery.com.au/.well-known/ai-catalog.json
 
 Content-Signal: search=yes, ai-input=yes, ai-train=no
 
@@ -49,3 +50,4 @@ Allow: /
 # API Catalog: https://cosycatscattery.com.au/.well-known/api-catalog
 # Agent Skills: https://cosycatscattery.com.au/.well-known/agent-skills/index.json
 # MCP Server Card: https://cosycatscattery.com.au/.well-known/mcp/server-card.json
+# ARD Capability Manifest: https://cosycatscattery.com.au/.well-known/ai-catalog.json

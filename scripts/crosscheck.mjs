@@ -15,18 +15,25 @@ async function runCrosscheck() {
   const { SITE, COMPLIANCE, PRODUCTS, CATEGORIES } = siteConfigModule;
 
   // 1. Check Agent Files A-N
+  // Note: api-catalog, oauth-protected-resource, oauth-authorization-server,
+  // openid-configuration, ucp, and ai-catalog.json (ARD) are served by Next.js
+  // Route Handlers, not static public/ files — extensionless files in public/
+  // were being served as application/octet-stream on Vercel regardless of
+  // vercel.json header rules, which broke agent scanners that check Content-Type
+  // before parsing JSON.
   const requiredFiles = [
     'public/robots.txt',
     'public/llms.txt',
     'public/auth.md',
-    'public/.well-known/api-catalog',
+    'app/.well-known/api-catalog/route.ts',
     'public/.well-known/agent-skills/index.json',
     'public/.well-known/mcp/server-card.json',
-    'public/.well-known/oauth-protected-resource',
-    'public/.well-known/oauth-authorization-server',
-    'public/.well-known/openid-configuration',
+    'app/.well-known/oauth-protected-resource/route.ts',
+    'app/.well-known/oauth-authorization-server/route.ts',
+    'app/.well-known/openid-configuration/route.ts',
     'public/.well-known/acp.json',
-    'public/.well-known/ucp',
+    'app/.well-known/ucp/route.ts',
+    'app/.well-known/ai-catalog.json/route.ts',
     'public/js/webmcp.js',
     'vercel.json',
   ];
@@ -49,17 +56,12 @@ async function runCrosscheck() {
     }
   }
 
-  // 3. Check .well-known/ucp has "ucp": "1.0"
-  const ucpPath = path.join(rootDir, 'public/.well-known/ucp');
+  // 3. Check .well-known/ucp route handler declares "ucp": "1.0"
+  const ucpPath = path.join(rootDir, 'app/.well-known/ucp/route.ts');
   if (fs.existsSync(ucpPath)) {
-    try {
-      const ucpObj = JSON.parse(fs.readFileSync(ucpPath, 'utf8'));
-      if (ucpObj.ucp !== '1.0') {
-        console.error('❌ [B6] .well-known/ucp MUST contain `"ucp": "1.0"`');
-        hasErrors = true;
-      }
-    } catch (e) {
-      console.error('❌ [B6] .well-known/ucp is not valid JSON:', e.message);
+    const ucpSrc = fs.readFileSync(ucpPath, 'utf8');
+    if (!/ucp:\s*['"]1\.0['"]/.test(ucpSrc)) {
+      console.error('❌ [B6] app/.well-known/ucp/route.ts MUST declare `ucp: \'1.0\'`');
       hasErrors = true;
     }
   }

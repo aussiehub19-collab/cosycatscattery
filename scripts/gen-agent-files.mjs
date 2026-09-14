@@ -56,18 +56,16 @@ async function run() {
           {
             key: 'Link',
             value:
-              '</.well-known/api-catalog>; rel="api-catalog", </.well-known/agent-skills/index.json>; rel="describedby", </llms.txt>; rel="describedby", </.well-known/mcp/server-card.json>; rel="service-desc", </auth.md>; rel="auth", </.well-known/openid-configuration>; rel="openid-configuration"',
+              '</.well-known/api-catalog>; rel="api-catalog", </.well-known/agent-skills/index.json>; rel="describedby", </llms.txt>; rel="describedby", </.well-known/mcp/server-card.json>; rel="service-desc", </auth.md>; rel="auth", </.well-known/openid-configuration>; rel="openid-configuration", </.well-known/ai-catalog.json>; rel="ai-catalog"',
           },
         ],
       },
       {
-        source: '/.well-known/api-catalog',
-        headers: [
-          { key: 'Content-Type', value: 'application/linkset+json' },
-          { key: 'Access-Control-Allow-Origin', value: '*' },
-        ],
-      },
-      {
+        // api-catalog, ucp, oauth-protected-resource, oauth-authorization-server,
+        // openid-configuration and ai-catalog.json are Next.js Route Handlers
+        // (app/.well-known/**/route.ts) — they set their own Content-Type directly
+        // because extensionless static files in public/ were being served as
+        // application/octet-stream on Vercel regardless of these header rules.
         source: '/.well-known/agent-skills/index.json',
         headers: [
           { key: 'Content-Type', value: 'application/json' },
@@ -82,35 +80,7 @@ async function run() {
         ],
       },
       {
-        source: '/.well-known/oauth-protected-resource',
-        headers: [
-          { key: 'Content-Type', value: 'application/json' },
-          { key: 'Access-Control-Allow-Origin', value: '*' },
-        ],
-      },
-      {
-        source: '/.well-known/oauth-authorization-server',
-        headers: [
-          { key: 'Content-Type', value: 'application/json' },
-          { key: 'Access-Control-Allow-Origin', value: '*' },
-        ],
-      },
-      {
-        source: '/.well-known/openid-configuration',
-        headers: [
-          { key: 'Content-Type', value: 'application/json' },
-          { key: 'Access-Control-Allow-Origin', value: '*' },
-        ],
-      },
-      {
         source: '/.well-known/acp.json',
-        headers: [
-          { key: 'Content-Type', value: 'application/json' },
-          { key: 'Access-Control-Allow-Origin', value: '*' },
-        ],
-      },
-      {
-        source: '/.well-known/ucp',
         headers: [
           { key: 'Content-Type', value: 'application/json' },
           { key: 'Access-Control-Allow-Origin', value: '*' },
@@ -153,6 +123,7 @@ Disallow: /thank-you-order/
 Disallow: /thank-you-wholesale/
 Disallow: /checkout/
 Sitemap: ${baseUrl}/sitemap.xml
+Agentmap: ${baseUrl}/.well-known/ai-catalog.json
 
 Content-Signal: search=yes, ai-input=yes, ai-train=no
 
@@ -198,6 +169,7 @@ Allow: /
 # API Catalog: ${baseUrl}/.well-known/api-catalog
 # Agent Skills: ${baseUrl}/.well-known/agent-skills/index.json
 # MCP Server Card: ${baseUrl}/.well-known/mcp/server-card.json
+# ARD Capability Manifest: ${baseUrl}/.well-known/ai-catalog.json
 `;
   fs.writeFileSync(path.join(publicDir, 'robots.txt'), robotsTxt.trim() + '\n');
 
@@ -271,30 +243,7 @@ Final kitten adoptions and payments are completed by human verification via dire
 `;
   fs.writeFileSync(path.join(publicDir, 'auth.md'), authMd.trim() + '\n');
 
-  // 5. public/.well-known/api-catalog
-  const apiCatalog = {
-    linkset: [
-      {
-        anchor: `${baseUrl}/`,
-        'https://www.iana.org/assignments/link-relations/service-doc': [{ href: `${baseUrl}/faq/` }],
-        title: `${SITE.name} — ${SITE.tagline}`,
-      },
-      { anchor: `${baseUrl}/shop/`, type: 'text/html', title: `${SITE.name} Catalog` },
-      { anchor: `${baseUrl}/about/`, type: 'text/html', title: `${SITE.name} Pedigree Heritage` },
-      { anchor: `${baseUrl}/api/products`, type: 'application/json', title: `${SITE.name} Products API` },
-      { anchor: `${baseUrl}/api/categories`, type: 'application/json', title: `${SITE.name} Categories API` },
-      { anchor: `${baseUrl}/api/search`, type: 'application/json', title: `${SITE.name} Search API` },
-      {
-        anchor: `${baseUrl}/api/mcp`,
-        type: 'application/json',
-        'https://www.iana.org/assignments/link-relations/service-desc': [
-          { href: `${baseUrl}/.well-known/mcp/server-card.json` },
-        ],
-        title: `${SITE.name} MCP Server`,
-      },
-    ],
-  };
-  fs.writeFileSync(path.join(wellKnownDir, 'api-catalog'), JSON.stringify(apiCatalog, null, 2));
+  // 5. /.well-known/api-catalog is served by app/.well-known/api-catalog/route.ts
 
   // 6. public/.well-known/agent-skills/index.json
   const agentSkills = {
@@ -445,65 +394,14 @@ Final kitten adoptions and payments are completed by human verification via dire
   };
   fs.writeFileSync(path.join(mcpDir, 'server-card.json'), JSON.stringify(serverCard, null, 2));
 
-  // 8. public/.well-known/oauth-protected-resource
-  const oauthResource = {
-    resource: baseUrl,
-    resource_name: `${SITE.name} Public Catalog`,
-    authorization_servers: [],
-    scopes_supported: [],
-    bearer_methods_supported: [],
-    resource_documentation: `${baseUrl}/auth.md`,
-    resource_policy_uri: `${baseUrl}/faq/`,
-    tls_client_certificate_bound_access_tokens: false,
-    note: `All resources on ${domain} are publicly accessible. No OAuth tokens required.`,
-  };
-  fs.writeFileSync(path.join(wellKnownDir, 'oauth-protected-resource'), JSON.stringify(oauthResource, null, 2));
+  // 8. /.well-known/oauth-protected-resource is served by
+  //    app/.well-known/oauth-protected-resource/route.ts
 
-  // 9. public/.well-known/oauth-authorization-server
-  const oauthServer = {
-    issuer: baseUrl,
-    authorization_endpoint: null,
-    token_endpoint: null,
-    jwks_uri: null,
-    grant_types_supported: [],
-    response_types_supported: [],
-    scopes_supported: [],
-    note: `${SITE.name} has no protected APIs. All resources publicly accessible.`,
-    public_resources: [
-      `${baseUrl}/shop/`,
-      `${baseUrl}/blog/`,
-      `${baseUrl}/faq/`,
-      `${baseUrl}/about/`,
-      `${baseUrl}/llms.txt`,
-      `${baseUrl}/.well-known/api-catalog`,
-      `${baseUrl}/.well-known/agent-skills/index.json`,
-      `${baseUrl}/.well-known/mcp/server-card.json`,
-    ],
-    agent_auth: {
-      register_uri: null,
-      identity_types_supported: ['none'],
-      credential_types_supported: ['none'],
-      notes: 'No registration required. All content publicly accessible to agents.',
-    },
-  };
-  fs.writeFileSync(path.join(wellKnownDir, 'oauth-authorization-server'), JSON.stringify(oauthServer, null, 2));
+  // 9. /.well-known/oauth-authorization-server is served by
+  //    app/.well-known/oauth-authorization-server/route.ts
 
-  // 10. public/.well-known/openid-configuration
-  const openidConfig = {
-    issuer: baseUrl,
-    note: `${SITE.name} does not operate an OpenID Connect provider. All resources publicly accessible.`,
-    public_site: true,
-    authorization_endpoint: null,
-    token_endpoint: null,
-    userinfo_endpoint: null,
-    jwks_uri: null,
-    scopes_supported: [],
-    response_types_supported: [],
-    grant_types_supported: [],
-    subject_types_supported: [],
-    id_token_signing_alg_values_supported: [],
-  };
-  fs.writeFileSync(path.join(wellKnownDir, 'openid-configuration'), JSON.stringify(openidConfig, null, 2));
+  // 10. /.well-known/openid-configuration is served by
+  //     app/.well-known/openid-configuration/route.ts
 
   // 11. public/.well-known/acp.json
   const acpJson = {
@@ -535,40 +433,7 @@ Final kitten adoptions and payments are completed by human verification via dire
   };
   fs.writeFileSync(path.join(wellKnownDir, 'acp.json'), JSON.stringify(acpJson, null, 2));
 
-  // 12. public/.well-known/ucp (MANDATORY "ucp": "1.0")
-  const ucpJson = {
-    ucp: '1.0',
-    protocol_version: '1.0',
-    spec: 'https://ucp.dev/specification/overview/',
-    schema: 'https://ucp.dev/schema/v1.json',
-    site: baseUrl,
-    name: SITE.name,
-    description: BRAND.description,
-    services: [
-      { id: 'product-catalog', type: 'catalog', url: `${baseUrl}/shop/`, description: 'Full Maine Coon boutique catalog' },
-      { id: 'mcp-server', type: 'mcp', url: `${baseUrl}/api/mcp`, description: 'MCP Streamable HTTP server' },
-      { id: 'order', type: 'commerce', url: `${baseUrl}/contact/`, description: 'Place kitten reservation or enquiry' },
-    ],
-    capabilities: ['browse', 'search', 'inquiry', 'content', 'mcp'],
-    endpoints: {
-      mcp: `${baseUrl}/api/mcp`,
-      catalog: `${baseUrl}/shop/`,
-      contact: `${baseUrl}/contact/`,
-      agent_skills: `${baseUrl}/.well-known/agent-skills/index.json`,
-      mcp_server_card: `${baseUrl}/.well-known/mcp/server-card.json`,
-      api_catalog: `${baseUrl}/.well-known/api-catalog`,
-      llms_txt: `${baseUrl}/llms.txt`,
-    },
-    currency: SITE.currency,
-    minimum_order_usd: SHOP.minOrder,
-    payment_methods: SHOP.paymentMethods,
-    legal: {
-      age_restriction: 'none',
-      product_type: 'Pedigree Maine Coon Cats & Care',
-      compliance: 'ANCATS Registered Pedigree Standards',
-    },
-  };
-  fs.writeFileSync(path.join(wellKnownDir, 'ucp'), JSON.stringify(ucpJson, null, 2));
+  // 12. /.well-known/ucp is served by app/.well-known/ucp/route.ts
 
   // 13. public/js/webmcp.js
   const webmcpJs = `(function () {
