@@ -9,7 +9,7 @@ export const SITE = {
   target: 'vercel',              // 'vercel' | 'static'
   primaryColor: '#0F172A',       // Royal Onyx Slate
   accentGold: '#D4AF37',         // Champagne Royal Gold
-  gscVerification: '', // Paste the Google Search Console <meta> content value here once verified. Leave empty until then — layout.tsx omits the tag rather than emitting a placeholder.
+  gscVerification: 'aaf9iS19z8d5h4ZZF7TTCxUVEoKacA2kMyF9YBfk9T8',
   indexNowKey: 'cosy-cats-indexnow-key',
   cartKey: 'mm-cart',            // localStorage key for cart
 };
