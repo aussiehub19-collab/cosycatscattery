@@ -10,7 +10,7 @@ export default function ChatHub() {
 
   const whatsappCleanNumber = CONTACT.whatsapp.replace(/[^0-9]/g, '');
   const whatsappUrl = `https://wa.me/${whatsappCleanNumber}?text=${encodeURIComponent(
-    `Hello ${SITE.name} concierge, I would like to enquire about available Maine Coon kittens.`
+    `Hello Cosy Cats Cattery 🐾\n\nI'd like to enquire about your Maine Coon kittens.\n\n---\n`
   )}`;
 
   return (

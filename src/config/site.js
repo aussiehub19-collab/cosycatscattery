@@ -18,7 +18,7 @@ export const CONTACT = {
   email: 'concierge&#64;cosycatscattery.com.au',
   rawEmail: 'concierge@cosycatscattery.com.au',
   phone: '+61 2 6100 0000',
-  whatsapp: '+61400000000',
+  whatsapp: '+61432068042',
   address: 'Federation Way, Yarralumla, Canberra ACT 2600',
   hq: 'Canberra, Australian Capital Territory, Australia',
   country: 'Australia',
@@ -52,7 +52,7 @@ export const FORMS = {
 
 export const CHAT = {
   channels: [
-    { type: 'whatsapp', value: '+61400000000', label: 'VIP WhatsApp Concierge' },
+    { type: 'whatsapp', value: '+61432068042', label: 'VIP WhatsApp Concierge' },
     { type: 'email', value: 'concierge@cosycatscattery.com.au', label: 'Email Cattery Office' },
     { type: 'phone', value: '+61 2 6100 0000', label: 'Call Canberra Estate' },
   ],
