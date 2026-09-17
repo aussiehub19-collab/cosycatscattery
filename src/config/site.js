@@ -298,8 +298,8 @@ export const PRODUCTS = [
       shipping: 'Flat-packed with stainless steel hardware, free nationwide courier delivery',
     },
     images: [
-      'https://images.unsplash.com/photo-1545249390-6bdfa286032f?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1592194996308-7b43878e84a6?q=80&w=1200&auto=format&fit=crop',
+      '/images/products/cat-castle-1.webp',
+      '/images/products/cat-castle-2.webp',
     ],
   },
   {
@@ -319,8 +319,8 @@ export const PRODUCTS = [
       origin: 'Designed in Canberra, Australia',
     },
     images: [
-      'https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?q=80&w=1200&auto=format&fit=crop',
+      '/images/products/grooming-1.webp',
+      '/images/products/grooming-2.webp',
     ],
   },
   {
@@ -340,8 +340,8 @@ export const PRODUCTS = [
       volume: '4kg Freeze-Dried Raw (reconstitutes to 16kg fresh food)',
     },
     images: [
-      'https://images.unsplash.com/photo-1601758228041-f3b2795255f1?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1548767797-d8c844163c4c?q=80&w=1200&auto=format&fit=crop',
+      '/images/products/nutrition-1.webp',
+      '/images/products/nutrition-2.webp',
     ],
   },
 ];
