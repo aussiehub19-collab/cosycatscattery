@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { MessageCircle, X, Phone, Mail, Clock, ShieldCheck } from 'lucide-react';
+import { MessageCircle, X, Mail, Clock, ShieldCheck } from 'lucide-react';
 import { CONTACT, SITE } from '@/config/site';
 import BrandLogo from '@/components/BrandLogo';
 
@@ -67,19 +67,6 @@ export default function ChatHub() {
                 <span className="text-[10px] bg-emerald-500/20 text-emerald-300 px-2 py-0.5 rounded-full">
                   Instant Reply
                 </span>
-              </a>
-
-              {/* Phone Channel */}
-              <a
-                href={`tel:${CONTACT.phone.replace(/\s+/g, '')}`}
-                id="chat-phone-link"
-                className="flex items-center justify-between p-3 bg-slate-900 border border-slate-800 hover:bg-slate-850 hover:border-amber-500/30 text-slate-200 rounded-xl font-medium transition-all"
-              >
-                <div className="flex items-center gap-2.5">
-                  <Phone className="w-4 h-4 text-amber-400" />
-                  <span>Call Canberra Nursery</span>
-                </div>
-                <span className="text-[11px] text-slate-400">{CONTACT.phone}</span>
               </a>
 
               {/* Email Channel */}
