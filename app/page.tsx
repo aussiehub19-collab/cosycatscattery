@@ -16,8 +16,10 @@ export default function HomePage() {
     {
       '@context': 'https://schema.org',
       '@type': ['Store', 'Organization'],
+      '@id': `https://${SITE.domain}/#organization`,
       name: SITE.name,
       description: BRAND.description,
+      sameAs: BRAND.sameAs,
       foundingDate: BRAND.foundingYear,
       foundingLocation: {
         '@type': 'Place',
@@ -69,7 +71,7 @@ export default function HomePage() {
         ratingValue: '4.2',
         bestRating: '5',
         worstRating: '1',
-        reviewCount: '48',
+        reviewCount: String(REVIEWS.length),
       },
     },
     {

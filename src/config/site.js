@@ -40,13 +40,7 @@ export const SHOP = {
 };
 
 export const FORMS = {
-  provider: 'web3forms',          // 'web3forms' (default) | 'resend'
-  // Set NEXT_PUBLIC_WEB3FORMS_KEY in Vercel Project Settings -> Environment
-  // Variables, then redeploy. Web3Forms keys are public-by-design (see
-  // .env.example) so NEXT_PUBLIC_ exposure to the client bundle is expected.
-  // Forms fall back to a key-pending redirect (no key = no error) until set.
-  web3formsKey: process.env.NEXT_PUBLIC_WEB3FORMS_KEY || '',
-  resendFrom: process.env.RESEND_FROM || '',
+  provider: 'smtp',
   turnstileSiteKey: process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY || '',
 };
 
@@ -74,7 +68,7 @@ export const BRAND = {
     'Reared cage-free in luxury indoor sensory habitats with early neural stimulation and socialization',
     'VIP Australia-Wide Climate-Controlled Flight Delivery with Door-to-Door Health Guarantee',
   ],
-  sameAs: [],
+  sameAs: [], // TODO: Add real social profile URLs (Facebook, Instagram, Google Business Profile, ANCATS listing)
   awards: [
     'ANCATS Registered Ethical Breeder Certification',
     'TICA International Pedigree Lineage Excellence',

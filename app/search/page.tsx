@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: `https://${SITE.domain}/search/`,
   },
-  robots: 'index, follow',
+  robots: { index: false, follow: true },
   other: {
     'og:updated_time': new Date().toISOString(),
   },

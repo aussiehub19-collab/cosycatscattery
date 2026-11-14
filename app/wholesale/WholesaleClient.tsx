@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { Crown, Building2, PackageCheck, Send, CheckCircle2, ShieldCheck, Truck } from 'lucide-react';
 import JsonLd from '@/components/JsonLd';
-import { SITE, FORMS } from '@/config/site';
+import { SITE } from '@/config/site';
 
 export default function WholesaleClient() {
   const [loading, setLoading] = useState(false);
@@ -14,25 +14,31 @@ export default function WholesaleClient() {
     setLoading(true);
     setErrorMsg(null);
     const form = e.currentTarget;
-    const key = (form.querySelector('[name="access_key"]') as HTMLInputElement)?.value;
+    const formData = new FormData(form);
 
-    const thankYouUrl = '/thank-you-wholesale/';
-
-    // Key-pending fallback
-    if (!key || key.startsWith('YOUR-') || key === 'pending') {
-      window.location.href = thankYouUrl;
+    const botcheck = formData.get('botcheck');
+    if (botcheck) {
+      window.location.href = '/thank-you-wholesale/';
       return;
     }
 
     try {
-      const res = await fetch('https://api.web3forms.com/submit', {
+      const res = await fetch('/api/contact', {
         method: 'POST',
-        headers: { Accept: 'application/json' },
-        body: new FormData(form),
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: formData.get('name'),
+          email: formData.get('email'),
+          phone: formData.get('phone'),
+          location: formData.get('business_name'),
+          interest: `Wholesale — ABN: ${formData.get('abn') || 'Not provided'}`,
+          message: formData.get('message'),
+          botcheck: '',
+        }),
       });
       const data = await res.json();
-      if (res.status === 200 && data.success) {
-        window.location.href = thankYouUrl;
+      if (data.success) {
+        window.location.href = '/thank-you-wholesale/';
       } else {
         throw new Error(data.message || 'Wholesale inquiry submission failed.');
       }
@@ -126,9 +132,6 @@ export default function WholesaleClient() {
             )}
 
             <form onSubmit={handleSubmit} className="space-y-4">
-              <input type="hidden" name="access_key" value={FORMS.web3formsKey || ''} />
-              <input type="hidden" name="subject" value={`New Wholesale Inquiry — ${SITE.name}`} />
-              <input type="hidden" name="from_name" value={`${SITE.name} Trade`} />
               <input type="checkbox" name="botcheck" className="hidden" style={{ display: 'none' }} />
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">

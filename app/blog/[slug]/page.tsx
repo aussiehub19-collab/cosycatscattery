@@ -40,7 +40,7 @@ export async function generateMetadata({
       url: `https://${SITE.domain}/blog/${post.slug}/`,
       images: [
         {
-          url: post.image,
+          url: post.image.startsWith('http') ? post.image : `https://${SITE.domain}${post.image}`,
           width: 1200,
           height: 900,
           alt: post.title,
@@ -51,7 +51,7 @@ export async function generateMetadata({
       card: 'summary_large_image',
       title,
       description,
-      images: [post.image],
+      images: [post.image.startsWith('http') ? post.image : `https://${SITE.domain}${post.image}`],
     },
     alternates: {
       canonical: `https://${SITE.domain}/blog/${post.slug}/`,

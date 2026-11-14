@@ -48,6 +48,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang={SITE.locale} className="bg-slate-950 text-slate-100 antialiased">
       <head>
+        <meta name="indexnow-key" content={SITE.indexNowKey} />
         <link rel="ai-catalog" href="/.well-known/ai-catalog.json" />
         <script src="/js/webmcp.js" defer />
       </head>

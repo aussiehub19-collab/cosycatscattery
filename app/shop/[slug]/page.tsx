@@ -37,7 +37,7 @@ export async function generateMetadata({
       url: `https://${SITE.domain}/shop/${product.slug}/`,
       images: [
         {
-          url: product.images[0],
+          url: product.images[0].startsWith('http') ? product.images[0] : `https://${SITE.domain}${product.images[0]}`,
           width: 1200,
           height: 900,
           alt: product.name,
@@ -48,7 +48,7 @@ export async function generateMetadata({
       card: 'summary_large_image',
       title,
       description,
-      images: [product.images[0]],
+      images: [product.images[0].startsWith('http') ? product.images[0] : `https://${SITE.domain}${product.images[0]}`],
     },
     alternates: {
       canonical: `https://${SITE.domain}/shop/${product.slug}/`,
