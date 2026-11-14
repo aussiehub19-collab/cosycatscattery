@@ -37,24 +37,43 @@ export const metadata: Metadata = {
 };
 
 export default function ShopPage() {
-  const shopSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      {
-        '@type': 'ListItem',
-        position: 1,
-        name: 'Home',
-        item: `https://${SITE.domain}/`,
+  const shopSchema = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'CollectionPage',
+      name: `Maine Coon Kittens for Sale Australia`,
+      description: `Browse available Maine Coon kittens for sale across Australia. DNA-tested, ANCATS registered, nationwide flight delivery.`,
+      url: `https://${SITE.domain}/shop/`,
+      mainEntity: {
+        '@type': 'ItemList',
+        numberOfItems: PRODUCTS.length,
+        itemListElement: PRODUCTS.map((p, i) => ({
+          '@type': 'ListItem',
+          position: i + 1,
+          url: `https://${SITE.domain}/shop/${p.slug}/`,
+          name: p.name,
+        })),
       },
-      {
-        '@type': 'ListItem',
-        position: 2,
-        name: 'Available Kittens & Shop',
-        item: `https://${SITE.domain}/shop/`,
-      },
-    ],
-  };
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Home',
+          item: `https://${SITE.domain}/`,
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'Available Kittens & Shop',
+          item: `https://${SITE.domain}/shop/`,
+        },
+      ],
+    },
+  ];
 
   return (
     <>

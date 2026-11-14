@@ -39,24 +39,43 @@ export const metadata: Metadata = {
 };
 
 export default function BlogIndexPage() {
-  const blogSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      {
-        '@type': 'ListItem',
-        position: 1,
-        name: 'Home',
-        item: `https://${SITE.domain}/`,
+  const blogSchema = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'CollectionPage',
+      name: `Maine Coon Breed Guides, Care & Buying Advice`,
+      description: `Everything about the Maine Coon breed: temperament, size, colours, grooming, pricing, and how to choose a breeder in Australia.`,
+      url: `https://${SITE.domain}/blog/`,
+      mainEntity: {
+        '@type': 'ItemList',
+        numberOfItems: POSTS.length,
+        itemListElement: POSTS.map((p, i) => ({
+          '@type': 'ListItem',
+          position: i + 1,
+          url: `https://${SITE.domain}/blog/${p.slug}/`,
+          name: p.title,
+        })),
       },
-      {
-        '@type': 'ListItem',
-        position: 2,
-        name: 'Feline Knowledge & Blog',
-        item: `https://${SITE.domain}/blog/`,
-      },
-    ],
-  };
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Home',
+          item: `https://${SITE.domain}/`,
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'Feline Knowledge & Blog',
+          item: `https://${SITE.domain}/blog/`,
+        },
+      ],
+    },
+  ];
 
   return (
     <>

@@ -48,6 +48,7 @@ export default function AboutPage() {
       url: `https://${SITE.domain}/about/`,
       mainEntity: {
         '@type': 'Organization',
+        '@id': `https://${SITE.domain}/#organization`,
         name: SITE.name,
         foundingDate: BRAND.foundingYear,
         foundingLocation: {
