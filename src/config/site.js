@@ -71,6 +71,7 @@ export const BRAND = {
   sameAs: [
     'https://www.tiktok.com/@cosy.cats.cattery',
     'https://www.facebook.com/share/1DXCQoGp52/',
+    'https://www.instagram.com/cos.ycats',
   ],
   awards: [
     'ANCATS Registered Ethical Breeder Certification',
