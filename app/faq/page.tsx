@@ -6,19 +6,19 @@ import FaqAccordion from '@/components/FaqAccordion';
 import { FAQ, SITE, CONTACT } from '@/config/site';
 
 export const metadata: Metadata = {
-  title: `How Much Is a Maine Coon Kitten? FAQ | ${SITE.name}`,
-  description: `How much is a Maine Coon kitten in Australia? Answers on pricing, adoption process, DNA health testing, flight delivery, temperament, and more.`,
+  title: `Maine Coon Kitten FAQ — Adoption, Health & Delivery | ${SITE.name}`,
+  description: `Frequently asked questions about Maine Coon kittens: adoption process, DNA health testing, flight delivery across Australia, temperament, and guarantees.`,
   openGraph: {
     type: 'website',
     siteName: SITE.name,
-    title: `Maine Coon Price & Adoption FAQ | ${SITE.name}`,
-    description: `Pricing, adoption process, flight transport, and pedigree certification questions for Maine Coons in Australia, answered.`,
+    title: `Maine Coon Kitten FAQ | ${SITE.name}`,
+    description: `Adoption process, flight transport, DNA health testing, and pedigree certification questions for Maine Coons in Australia, answered.`,
     url: `https://${SITE.domain}/faq/`,
   },
   twitter: {
     card: 'summary_large_image',
-    title: `Maine Coon Price & Adoption FAQ | ${SITE.name}`,
-    description: `Pricing, adoption, health, and transport FAQ.`,
+    title: `Maine Coon Kitten FAQ | ${SITE.name}`,
+    description: `Adoption, health testing, and transport FAQ for Maine Coon kittens.`,
   },
   alternates: {
     canonical: `https://${SITE.domain}/faq/`,

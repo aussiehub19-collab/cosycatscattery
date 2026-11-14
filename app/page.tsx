@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Crown, ShieldCheck, Plane, Award, Sparkles, Heart, CheckCircle2, ArrowRight, Star, BookOpen } from 'lucide-react';
 import SmartImage from '@/components/SmartImage';
@@ -6,6 +7,36 @@ import TrustpilotReviews from '@/components/TrustpilotReviews';
 import HeroSlider from '@/components/HeroSlider';
 import FaqAccordion from '@/components/FaqAccordion';
 import { SITE, BRAND, PRODUCTS, POSTS, FAQ, CONTACT, SHOP, REVIEWS } from '@/config/site';
+
+export const metadata: Metadata = {
+  title: `Maine Coon Kittens for Sale Canberra & Australia-Wide | ${SITE.name}`,
+  description: `Maine Coon kittens for sale from ${SITE.name}, Canberra. ANCATS registered, DNA health certified, VIP flight delivery Australia-wide. Reserve yours today.`,
+  openGraph: {
+    type: 'website',
+    siteName: SITE.name,
+    title: `Maine Coon Kittens for Sale | ${SITE.name}`,
+    description: `${BRAND.description} Certified DNA negative parents, 2-year genetic health guarantee.`,
+    url: `https://${SITE.domain}/`,
+    images: [
+      {
+        url: `https://${SITE.domain}/images/hero/hero-1.webp`,
+        width: 1920,
+        height: 1280,
+        alt: `${SITE.name} Pedigree Maine Coon Kittens`,
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: `Maine Coon Kittens for Sale | ${SITE.name}`,
+    description: `${BRAND.description}`,
+    images: [`https://${SITE.domain}/images/hero/hero-1.webp`],
+  },
+  alternates: {
+    canonical: `https://${SITE.domain}/`,
+  },
+  robots: 'index, follow',
+};
 
 export default function HomePage() {
   const featuredProducts = PRODUCTS.filter(p => p.featured).slice(0, 4);

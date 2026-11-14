@@ -4,13 +4,13 @@ import JsonLd from '@/components/JsonLd';
 import ShopClient from './ShopClient';
 
 export const metadata: Metadata = {
-  title: `Maine Coon Kittens for Sale Australia | ${SITE.name}`,
-  description: `Browse available Maine Coon kittens for sale across Australia. DNA-tested, ANCATS registered, nationwide flight delivery from our Canberra cattery.`,
+  title: `Buy Maine Coon Kittens Online — Available Now | ${SITE.name}`,
+  description: `Browse our available Maine Coon kittens ready for adoption across Australia. DNA-tested, ANCATS registered, nationwide flight delivery from Canberra.`,
   openGraph: {
     type: 'website',
     siteName: SITE.name,
-    title: `Maine Coon Kittens for Sale Australia | ${SITE.name}`,
-    description: `Browse available Maine Coon kittens for sale across Australia. DNA-tested, ANCATS registered, nationwide flight delivery.`,
+    title: `Buy Maine Coon Kittens Online — Available Now | ${SITE.name}`,
+    description: `Browse our available Maine Coon kittens ready for adoption across Australia. DNA-tested, ANCATS registered, nationwide flight delivery.`,
     url: `https://${SITE.domain}/shop/`,
     images: [
       {
@@ -23,8 +23,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: `Maine Coon Kittens for Sale Australia | ${SITE.name}`,
-    description: `Browse available Maine Coon kittens for sale across Australia.`,
+    title: `Buy Maine Coon Kittens Online | ${SITE.name}`,
+    description: `Browse our available Maine Coon kittens ready for adoption across Australia.`,
     images: [`https://${SITE.domain}/images/hero/hero-1.webp`],
   },
   alternates: {
@@ -41,8 +41,8 @@ export default function ShopPage() {
     {
       '@context': 'https://schema.org',
       '@type': 'CollectionPage',
-      name: `Maine Coon Kittens for Sale Australia`,
-      description: `Browse available Maine Coon kittens for sale across Australia. DNA-tested, ANCATS registered, nationwide flight delivery.`,
+      name: `Buy Maine Coon Kittens — Available Now`,
+      description: `Browse our available Maine Coon kittens ready for adoption across Australia. DNA-tested, ANCATS registered, nationwide flight delivery.`,
       url: `https://${SITE.domain}/shop/`,
       mainEntity: {
         '@type': 'ItemList',

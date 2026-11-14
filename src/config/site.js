@@ -700,8 +700,8 @@ Ready to arrange Sydney delivery? [Contact our concierge](/contact/) with your p
   },
   {
     slug: 'maine-coon-kittens-for-sale-in-melbourne',
-    title: 'Maine Coon Kittens for Sale in Melbourne: Delivery, Pricing & What to Know',
-    metaTitle: 'Maine Coon Kittens for Sale, Melbourne',
+    title: 'Buying a Maine Coon Kitten in Melbourne: Delivery, Pricing & What to Know',
+    metaTitle: 'Maine Coon Kittens Melbourne — Delivery Guide',
     excerpt: 'Everything a Melbourne-based buyer needs to know about reserving a Maine Coon kitten from an interstate cattery, including honest delivery logistics.',
     category: 'Delivery & Logistics',
     date: '2026-07-05',

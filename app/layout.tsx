@@ -11,12 +11,12 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL(`https://${SITE.domain}`),
-  title: `Maine Coon Kittens for Sale | ${SITE.name}, Canberra`,
-  description: `Maine Coon kittens for sale from ${SITE.name}, Canberra. ANCATS registered, DNA health certified, VIP flight delivery Australia-wide. Reserve yours today.`,
+  title: `Pedigree Maine Coon Kittens | ${SITE.name}, Canberra`,
+  description: `${SITE.name} — Canberra's boutique Maine Coon cattery. ANCATS registered, DNA health certified, VIP flight delivery Australia-wide. Reserve yours today.`,
   openGraph: {
     type: 'website',
     siteName: SITE.name,
-    title: `Maine Coon Kittens for Sale | ${SITE.name}`,
+    title: `Pedigree Maine Coon Kittens | ${SITE.name}`,
     description: `${BRAND.description} Certified DNA negative parents, 2-year genetic health guarantee.`,
     url: `https://${SITE.domain}/`,
     images: [
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: `Maine Coon Kittens for Sale | ${SITE.name}`,
+    title: `Pedigree Maine Coon Kittens | ${SITE.name}`,
     description: `${BRAND.description}`,
     images: [`https://${SITE.domain}/images/hero/hero-1.webp`],
   },
