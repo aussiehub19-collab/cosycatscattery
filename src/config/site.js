@@ -68,7 +68,10 @@ export const BRAND = {
     'Reared cage-free in luxury indoor sensory habitats with early neural stimulation and socialization',
     'VIP Australia-Wide Climate-Controlled Flight Delivery with Door-to-Door Health Guarantee',
   ],
-  sameAs: [], // TODO: Add real social profile URLs (Facebook, Instagram, Google Business Profile, ANCATS listing)
+  sameAs: [
+    'https://www.tiktok.com/@cosy.cats.cattery',
+    'https://www.facebook.com/share/1DXCQoGp52/',
+  ],
   awards: [
     'ANCATS Registered Ethical Breeder Certification',
     'TICA International Pedigree Lineage Excellence',
@@ -938,6 +941,331 @@ Polydactyly is a natural genetic variation where a cat is born with more than th
 Historically, up to 40% of original wild Maine Coons in the state of Maine possessed polydactyl paws. These wide paws acted as natural snowshoes during deep snowfalls and provided unrivaled grip on wet ship decks alongside merchant sailors.
 
 Polydactyly is completely harmless and adds distinctive charm and dextrous agility. Polydactyl kittens are known for exceptional intelligence and often love using their extra-wide paws to gently hold hands and play.
+    `,
+  },
+  {
+    slug: 'what-to-feed-a-maine-coon-kitten-australia',
+    title: 'What to Feed a Maine Coon Kitten in Australia: Raw, Dry & Wet Diet Guide (2026)',
+    metaTitle: 'Maine Coon Kitten Diet Guide Australia',
+    excerpt: 'The complete feeding guide for Maine Coon kittens in Australia — raw diet protocols, premium kibble options, wet food ratios, and how much to feed at every growth stage.',
+    category: 'Nutrition & Health',
+    date: '2026-11-12',
+    readTime: '8 min read',
+    image: '/images/hero/hero-4.webp',
+    author: 'Cosy Cats Cattery Concierge',
+    content: `
+Maine Coons are the largest domestic cat breed, and their nutritional needs during kittenhood are dramatically different from an average-sized kitten. They grow for 3–5 years instead of the typical 12 months, which means the feeding plan you choose in the first year sets the foundation for their entire adult frame, coat density, and joint health.
+
+### 1. Protein Requirements for Giant Breed Kittens
+
+Maine Coon kittens need a minimum of 40% protein from named animal sources — not plant protein fillers. Look for chicken, turkey, kangaroo, or fish as the first ingredient. Avoid foods where "meat meal" or "by-products" lead the label. Giant breeds build more muscle mass and bone density than standard kittens, so protein quality is non-negotiable.
+
+### 2. Raw Feeding for Maine Coons
+
+Raw feeding is increasingly popular among Australian Maine Coon breeders. A balanced raw diet typically includes 80% muscle meat, 10% raw meaty bone (chicken necks, quail frames), 5% liver, and 5% other organ meat. Always source human-grade raw from a reputable Australian supplier. Never feed cooked bones — they splinter and are dangerous.
+
+If you choose raw, supplement with taurine (essential for feline heart function) and omega-3 fatty acids from fish oil to support coat growth and cognitive development. We recommend consulting a feline nutritionist before starting a raw protocol.
+
+### 3. Premium Dry Food (Kibble) Options
+
+For dry food, choose a brand formulated specifically for large or giant breed kittens. Look for: named protein as the first ingredient, minimum 40% protein / 18% fat, added taurine and DHA, no artificial colours or preservatives. Premium Australian-available options include Royal Canin Maine Coon Kitten, Applaws Kitten, and Ivory Coat Kitten.
+
+### 4. Wet Food and the Hydration Factor
+
+Maine Coons are prone to urinary and kidney issues later in life. Wet food provides critical moisture that kibble alone cannot. We recommend a 60/40 or 70/30 wet-to-dry ratio for kittens. Canned or pouch food should be grain-free with at least 70% meat content.
+
+### 5. Feeding Schedule by Age
+
+**8–12 weeks:** 4 meals per day, approximately 60–80g wet food per meal plus free-access kitten kibble.
+**3–6 months:** 3 meals per day, increasing portions as body weight climbs. Monitor body condition — you should feel ribs without pressing hard but not see them.
+**6–12 months:** 2–3 meals per day. Maine Coons are still growing rapidly. Do not restrict calories as you would for a standard breed.
+**12 months – 5 years:** 2 meals per day. Maine Coons are still filling out their frame well past their first birthday.
+
+### 6. Foods That Are Toxic to Cats
+
+Never feed your Maine Coon: onion, garlic, grapes, raisins, chocolate, caffeine, alcohol, xylitol, or raw fish intended for human sushi (it may contain parasites). Cooked plain chicken or fish is fine as an occasional treat.
+
+### 7. Weight Monitoring for Giant Breeds
+
+Male Maine Coons can reach 8–12kg as adults. It is essential to distinguish healthy giant-breed mass from obesity. Use body condition scoring rather than scales alone: a healthy Maine Coon has a visible waist from above and a slight abdominal tuck from the side, regardless of their weight number. Your vet can teach you this assessment at any check-up.
+
+### FAQ
+
+**What is the best food for a Maine Coon kitten?** A high-protein wet food combined with quality large-breed kitten kibble. Raw diets are excellent when properly balanced.
+
+**How much should a Maine Coon kitten eat per day?** At 8–12 weeks, roughly 240–320g of wet food across 4 meals plus free-access kibble. Increase proportionally as they grow.
+
+**Can Maine Coon kittens eat raw meat?** Yes, when properly balanced with bone, organs, taurine, and omega-3 supplementation. Source human-grade meat only.
+
+For kitten-specific nutrition products, see our [holistic nutrition range](/shop/holistic-giant-breed-vitality-pack/).
+    `,
+  },
+  {
+    slug: 'maine-coon-health-problems-and-prevention',
+    title: 'Maine Coon Health Problems: 7 Common Issues & How to Prevent Them',
+    metaTitle: 'Maine Coon Health Problems & Prevention',
+    excerpt: 'The 7 most common Maine Coon health issues including HCM, hip dysplasia, and SMA — what DNA testing catches, what it cannot, and how responsible breeders prevent genetic disease.',
+    category: 'Health & Genetics',
+    date: '2026-11-10',
+    readTime: '7 min read',
+    image: '/images/hero/hero-2.webp',
+    author: 'Cosy Cats Cattery Concierge',
+    content: `
+Maine Coons are generally a robust, hardy breed — but like all pedigree lines, they carry specific genetic predispositions that every owner and prospective buyer should understand. The good news: most of these conditions are either preventable through DNA testing or manageable with early detection.
+
+### 1. Hypertrophic Cardiomyopathy (HCM)
+
+HCM is the most common heart disease in all cats, and Maine Coons have a known genetic predisposition. The heart muscle thickens over time, reducing the chambers' ability to pump blood efficiently. A DNA test exists for the MyBPC3 mutation linked to Maine Coon HCM.
+
+**Prevention:** Responsible breeders DNA-test all breeding cats and only breed from N/N (negative/negative) pairs. At Cosy Cats Cattery, every parent is [DNA tested clear for HCM](/blog/understanding-maine-coon-dna-testing-hcm-sma-pkdef/). We also recommend an echocardiogram screening at age 2–3 for adopted kittens as a precautionary baseline.
+
+### 2. Spinal Muscular Atrophy (SMA)
+
+SMA causes progressive muscle weakness starting in the hindquarters. Affected kittens show symptoms by 3–4 months — an unsteady gait, difficulty jumping, and muscle wasting. SMA is autosomal recessive, meaning a kitten must inherit the defective gene from both parents to be affected.
+
+**Prevention:** A simple DNA swab test identifies carriers. Breeding two carriers produces 25% affected kittens — which is why reputable breeders never pair two SMA carriers.
+
+### 3. Pyruvate Kinase Deficiency (PKDef)
+
+PKDef is an inherited enzyme deficiency that leads to chronic anaemia. Affected cats tire easily, lose weight, and may develop an enlarged spleen. Like SMA, it is autosomal recessive.
+
+**Prevention:** DNA testing. All our breeding cats are confirmed N/N for PKDef.
+
+### 4. Hip Dysplasia
+
+Maine Coons are one of the few cat breeds where hip dysplasia is documented — likely due to their large, heavy bone structure. The hip joint doesn't form correctly, leading to arthritis and pain over time.
+
+**Prevention:** Selective breeding from lines with no history of hip dysplasia, maintaining healthy weight (obesity dramatically worsens the condition), and providing appropriate vertical climbing structures that strengthen hip muscles. See our [cat castle range](/shop/monarch-grand-chateau-cat-castle/) designed for large-breed exercise.
+
+### 5. Polycystic Kidney Disease (PKD)
+
+PKD causes cysts to form in the kidneys, gradually destroying function. While more common in Persians, it has been identified in some Maine Coon lines.
+
+**Prevention:** DNA testing for the PKD1 gene. All Cosy Cats Cattery parents are tested N/N for PKD.
+
+### 6. Dental Disease (Gingivitis & Stomatitis)
+
+Maine Coons can be predisposed to gum inflammation. Left untreated, it leads to painful eating, tooth loss, and secondary infections.
+
+**Prevention:** Annual dental check-ups, raw meaty bones for natural teeth cleaning (chicken necks and quail frames), and early intervention if you notice redness at the gum line, drooling, or reluctance to eat kibble.
+
+### 7. Obesity
+
+Perhaps the most preventable issue. Maine Coons are big cats, but they are not meant to be overweight. The breed's large frame can mask excess fat, and owners sometimes confuse healthy size with an appropriate weight.
+
+**Prevention:** Feed appropriate portions of high-protein, low-carbohydrate food. Avoid ad-lib kibble feeding after 12 months. Use body condition scoring rather than weight alone — your vet can teach you this assessment. See our [feeding guide](/blog/what-to-feed-a-maine-coon-kitten-australia/) for detailed nutrition protocols.
+
+### The Role of a Responsible Breeder
+
+A reputable breeder eliminates or dramatically reduces the risk of conditions 1–5 through comprehensive DNA testing before any mating occurs. Always ask for N/N test certificates for HCM, SMA, PKDef, and PKD before placing a deposit. See our guide on [how to choose a breeder](/blog/how-to-choose-a-maine-coon-breeder-australia/) for the full checklist.
+
+### FAQ
+
+**What is the most common health problem in Maine Coons?** HCM (heart disease) is the most studied genetic predisposition, but it is highly preventable through DNA screening of breeding parents.
+
+**Do Maine Coons have a lot of health problems?** No more than most pedigree breeds. With proper DNA testing and responsible breeding, Maine Coons are among the most robust large-breed cats.
+
+**How can I tell if my Maine Coon is healthy?** Clear eyes, clean ears, a thick double coat with no bald patches, energetic play behaviour, and steady weight gain in kittens. Annual vet checks are essential.
+    `,
+  },
+  {
+    slug: 'how-long-do-maine-coons-live',
+    title: 'How Long Do Maine Coons Live? Lifespan, Ageing & Longevity Tips',
+    metaTitle: 'Maine Coon Lifespan Guide',
+    excerpt: 'Maine Coon average lifespan in Australia, what factors affect longevity, and 6 evidence-based strategies to help your Maine Coon live a longer, healthier life.',
+    category: 'Health & Genetics',
+    date: '2026-11-08',
+    readTime: '6 min read',
+    image: '/images/hero/hero-1.webp',
+    author: 'Cosy Cats Cattery Concierge',
+    content: `
+One of the first questions prospective Maine Coon owners ask is "how long will they live?" It is a fair question — when you are committing to a companion for years, you want to know what to expect.
+
+### Average Maine Coon Lifespan
+
+A healthy Maine Coon from tested, pedigree lines typically lives **12–15 years**, with some reaching 18–20 years. This is broadly comparable to the general domestic cat average of 12–18 years. The key word is "healthy" — genetics, diet, environment, and veterinary care all shift that range significantly.
+
+### Factors That Shorten Lifespan
+
+**Unscreened genetics:** HCM (heart disease) is the single biggest life-shortening condition in Maine Coons, and it is largely preventable through [DNA testing](/blog/understanding-maine-coon-dna-testing-hcm-sma-pkdef/). Buying from an untested line dramatically increases the risk of losing your cat to heart failure in middle age.
+
+**Obesity:** Overweight Maine Coons develop arthritis, diabetes, and liver disease earlier. See our [diet guide](/blog/what-to-feed-a-maine-coon-kitten-australia/) for appropriate feeding.
+
+**Indoor vs outdoor:** Indoor Maine Coons live significantly longer than free-roaming cats. Outdoor risks include cars, dogs, snake bites (a serious risk in Australia), and infectious diseases from contact with feral cats.
+
+**Poor dental health:** Chronic dental disease leads to systemic infection that shortens lifespan. Annual dental checks are not optional for Maine Coons.
+
+### 6 Evidence-Based Longevity Strategies
+
+**1. Buy from DNA-tested parents.** This eliminates the most common genetic killers before your kitten is even born. Insist on N/N certificates for HCM, SMA, PKDef, and PKD.
+
+**2. Feed a high-protein, low-carb diet.** Maine Coons are obligate carnivores. Grain-heavy kibble contributes to obesity and urinary issues. Prioritise named-meat wet food and consider a [raw feeding protocol](/blog/what-to-feed-a-maine-coon-kitten-australia/).
+
+**3. Keep them indoors or in a secure catio.** Australian snakes, cars, and neighbourhood dogs are responsible for more premature cat deaths than any genetic condition. A catio or enclosed outdoor run gives them fresh air safely.
+
+**4. Annual vet checks — no exceptions.** Cats are masters at hiding illness. An annual blood panel, dental check, and physical exam catches kidney disease, thyroid issues, and dental problems early, when they are treatable.
+
+**5. Maintain a healthy weight throughout life.** Use body condition scoring, not just scales. A healthy Maine Coon has a visible waist from above and a slight tummy tuck from the side, regardless of their impressive size.
+
+**6. Mental and physical enrichment.** Maine Coons are intelligent, social cats that need stimulation. Boredom leads to stress, overeating, and behavioural issues. Climbing structures, puzzle feeders, and daily interactive play sessions keep them engaged. Our [timber castles](/shop/monarch-grand-chateau-cat-castle/) are designed specifically for large-breed exercise.
+
+### Life Stages of a Maine Coon
+
+**Kitten (0–12 months):** Rapid growth, high energy, socialisation window.
+**Junior (1–3 years):** Still growing and filling out their frame. Many Maine Coons are not fully mature until age 3–5.
+**Prime (3–6 years):** Peak physical condition, full adult size.
+**Mature (7–10 years):** May slow down slightly. Increase vet visits to twice yearly.
+**Senior (11–14 years):** Monitor for kidney function, thyroid, and dental disease.
+**Geriatric (15+ years):** Adjust diet, provide lower climbing options, and maximise comfort.
+
+### FAQ
+
+**How long do Maine Coons live on average?** 12–15 years with proper care, genetics, and diet. Some reach 18–20.
+
+**Do Maine Coons live longer than normal cats?** About the same when from tested lines. Untested lines may have shorter lifespans due to HCM risk.
+
+**What is the oldest Maine Coon on record?** Anecdotal reports exist of Maine Coons reaching 25+ years, though 18–20 is more commonly documented for exceptionally long-lived individuals.
+
+Thinking about adopting a Maine Coon? Browse our [available kittens](/shop/) — all from DNA-tested parents bred for health and longevity.
+    `,
+  },
+  {
+    slug: 'maine-coon-personality-temperament-behaviour',
+    title: 'Maine Coon Personality & Temperament: What Living with a Gentle Giant Is Really Like',
+    metaTitle: 'Maine Coon Personality & Temperament Guide',
+    excerpt: 'An honest deep-dive into Maine Coon behaviour — their dog-like loyalty, vocal chirps, water obsession, and the realities of living with a 10kg lap cat that follows you everywhere.',
+    category: 'Breed Guide',
+    date: '2026-11-06',
+    readTime: '7 min read',
+    image: '/images/hero/hero-3.webp',
+    author: 'Cosy Cats Cattery Concierge',
+    content: `
+If you have read that Maine Coons are "dog-like cats" and wondered what that actually means in daily life, this guide covers the real behavioural traits — the charming ones and the challenging ones — from breeders who live with these cats every day.
+
+### The "Dog of the Cat World" Reputation
+
+Maine Coons earned this nickname because they exhibit behaviours most people associate with dogs rather than cats. They follow their owners from room to room, greet them at the door, come when called by name, and can learn tricks and commands. Many will play fetch with small toys and bring them back repeatedly.
+
+This loyalty is wonderful — but it also means Maine Coons do not do well left alone for long periods. If you work full-time away from home, consider adopting a pair so they have company, or ensure someone checks in during the day.
+
+### Vocal Communication — Chirps, Trills & Chattering
+
+Maine Coons are famously vocal, but not in the way a Siamese is. Instead of loud meowing, they communicate with a distinctive repertoire of chirps, trills, and chattering sounds. They will "talk" to you when you come home, when they want food, when they spot birds through the window, and sometimes apparently just because they feel like commenting on the situation. Many owners report having full "conversations" with their Maine Coon.
+
+### Water Fascination
+
+A surprising number of Maine Coons are genuinely fascinated by water. They will dip their paws in their water bowl, play in dripping taps, join you in the bathroom, and some will even paddle in a shallow tray of water. This is thought to be a remnant of their seafaring heritage — Maine Coons historically travelled on ships and are one of the few breeds with semi-water-resistant fur.
+
+Keep toilet lids down and be prepared for wet paw prints around their water bowl.
+
+### Intelligence and Problem-Solving
+
+Maine Coons are exceptionally intelligent cats. They learn to open doors (including lever handles and some round knobs), figure out how to open cupboards, and can manipulate puzzle feeders designed for dogs. This intelligence is rewarding to engage with — and exhausting to manage if you do not provide adequate mental stimulation.
+
+Invest in puzzle feeders, interactive toys, and rotation of enrichment activities. A bored Maine Coon will make their own entertainment, and you may not appreciate their choice of hobby (bathroom roll destruction, kitchen counter archaeology, curtain climbing).
+
+### Gentle Nature with Children and Other Pets
+
+Maine Coons are remarkably patient with children. Their large size makes them robust enough to handle toddler attention that would stress a smaller cat, and their gentle temperament means they are far more likely to walk away from rough play than to react aggressively. They also coexist well with cat-friendly dogs and other cats.
+
+That said, every animal is an individual. Proper introduction protocols still matter. See our guide on [whether Maine Coons make good family pets](/blog/are-maine-coons-good-family-pets/) for a detailed breakdown.
+
+### The Lap Cat Paradox
+
+Maine Coons want to be near you at all times — but they are not always traditional lap cats. Many prefer to sit beside you, lean against you, or drape themselves across your desk while you work. Others are enthusiastic lap cats who will climb onto you uninvited, regardless of the fact that they weigh 8–10kg. You do not choose whether your Maine Coon is a lap cat — they choose for you.
+
+### Activity Levels by Age
+
+**Kittens (0–2 years):** Extremely active, acrobatic, and destructive in the most endearing way possible. They need substantial play time, climbing structures, and kitten-proofing of your home.
+
+**Adults (3–7 years):** Active but calmer. They settle into routines and tend to have specific play sessions rather than constant chaos. Most enjoy a combination of interactive play, supervised outdoor time, and napping near their favourite human.
+
+**Seniors (8+ years):** Increasingly mellow but still engaged. They may prefer lower climbing options and gentler play, but a healthy senior Maine Coon is still far more interactive than most cat breeds at any age.
+
+### FAQ
+
+**Are Maine Coons affectionate?** Extremely. They bond strongly with their family and want to be involved in everything you do. Expect a constant furry shadow.
+
+**Do Maine Coons like to be held?** It depends on the individual. Most tolerate and enjoy being held, but they may prefer sitting beside you rather than being picked up. Socialisation as a kitten is the key factor.
+
+**Are Maine Coons high maintenance?** They need regular [grooming](/blog/maine-coon-grooming-guide/), mental stimulation, and quality nutrition — more than an average cat, but manageable with routine.
+
+Curious to meet a Maine Coon in person? [Contact our Canberra cattery](/contact/) to arrange a viewing appointment.
+    `,
+  },
+  {
+    slug: 'how-to-train-a-maine-coon-kitten',
+    title: 'How to Train a Maine Coon Kitten: Litter Training, Tricks & Socialisation',
+    metaTitle: 'Maine Coon Kitten Training Guide',
+    excerpt: 'Step-by-step training guide for Maine Coon kittens — litter box training, teaching tricks, harness training, socialisation windows, and how to stop unwanted behaviours.',
+    category: 'Kitten Care',
+    date: '2026-11-04',
+    readTime: '7 min read',
+    image: '/images/hero/hero-2.webp',
+    author: 'Cosy Cats Cattery Concierge',
+    content: `
+Maine Coons are one of the most trainable cat breeds in the world. Their intelligence, food motivation, and desire to please their humans make them excellent candidates for training that goes well beyond basic litter habits. Here is how to make the most of your kitten's learning potential.
+
+### 1. The Socialisation Window (2–14 Weeks)
+
+The most critical training period for any kitten is the socialisation window between 2 and 14 weeks of age. During this time, your kitten's brain is forming lasting impressions about what is safe and normal. Everything they experience positively during this window — different people, sounds, surfaces, gentle handling, car rides — becomes part of their comfort zone for life.
+
+At Cosy Cats Cattery, we begin Early Neural Stimulation (ENS) handling from day 3 and introduce household sounds, different floor textures, gentle children's voices, and vacuum cleaner noise from week 3 onwards. By the time our kittens leave at 10–12 weeks, they are confident with common household experiences.
+
+**Your job after adoption:** Continue exposing them to new (positive) experiences — visitors, being gently brushed, having paws handled, carrier rides, and if possible, brief vet visits for treat-only socialisation.
+
+### 2. Litter Box Training
+
+Maine Coon kittens from a reputable breeder arrive already litter-trained — they learn from their mother starting around 3–4 weeks. Your role is simply to make the transition smooth:
+
+- Place the litter box in a quiet, accessible location away from food and water.
+- Use the same litter substrate the breeder was using (we provide this information at handover).
+- For the first week, confine your kitten to one room with the litter box, food, water, and sleeping area. This prevents accidents while they learn the layout of their new home.
+- Maine Coons are large cats. Use an oversized litter box — standard boxes are too small even for kittens once they reach 4–5 months. We recommend a large storage tub with a cut-out entry.
+
+### 3. Teaching Tricks with Clicker Training
+
+Maine Coons excel at clicker training. The method: click the moment the desired behaviour occurs, then immediately give a tiny high-value treat (cooked chicken, freeze-dried fish). The click bridges the gap between the behaviour and the reward.
+
+**Easy starter tricks:**
+- **Sit:** Hold a treat above their head so they naturally sit to look up. Click and treat the moment their bottom touches the ground. Add the word "sit" once the behaviour is reliable.
+- **High five:** Gently tap one front paw while offering a treat. Click and treat when they lift the paw. Gradually raise your hand until they reach up to meet it.
+- **Come:** Call their name and click/treat when they come to you. Maine Coons learn recall faster than most cat breeds because they already want to follow you.
+- **Fetch:** Many Maine Coons fetch naturally. Toss a small toy, and if they bring it back, click and treat immediately. Some learn this in a single session.
+
+Train in 3–5 minute sessions, no more than twice a day. End on a success. Maine Coons have excellent memories and will retain tricks even with inconsistent practice.
+
+### 4. Harness and Lead Training
+
+Maine Coons are one of the best breeds for harness walking. Start early:
+
+**Week 1:** Leave the harness near their sleeping area so they can sniff and investigate it.
+**Week 2:** Put the harness on indoors for 5–10 minutes with treats and play. Remove it while they are still happy — never let them associate it with distress.
+**Week 3:** Attach the lead and let them drag it around indoors (supervised). Click and treat for calm movement.
+**Week 4:** Pick up the lead and follow them around inside. Do not pull — let them lead initially.
+**Week 5+:** Venture into a secure, quiet outdoor area. Avoid busy roads and off-lead dogs for the first several outings.
+
+### 5. Stopping Unwanted Behaviours
+
+**Counter surfing:** Maine Coons love height. Rather than punishing counter jumping (punishment does not work on cats — they simply learn to do it when you are not watching), provide attractive alternatives: tall cat trees, wall shelves, and a dedicated high spot near the kitchen. Make the counter less appealing with double-sided tape temporarily.
+
+**Biting during play:** Never use your hands as toys. If a kitten bites during play, immediately stop, say "ouch" in a calm tone, and walk away for 30 seconds. Return and redirect to an appropriate toy. Consistency is key — every family member must follow the same protocol.
+
+**Scratching furniture:** Provide multiple scratching posts near furniture they target, in both vertical and horizontal orientations. Sisal rope, cardboard, and natural timber are preferred textures. Place a post directly next to the sofa arm they are scratching, then gradually move it once they are using it reliably.
+
+### 6. Carrier Training for Stress-Free Vet Visits
+
+Leave the carrier out permanently with a soft blanket and occasional treats inside. Feed meals near (and eventually inside) the carrier. Take short car rides that do NOT end at the vet — just around the block and home for treats. When vet day arrives, the carrier is a familiar, safe space, not a kidnapping device.
+
+### FAQ
+
+**Are Maine Coon kittens easy to train?** Yes — they are among the most trainable cat breeds due to their intelligence and food motivation.
+
+**Can you train a Maine Coon to walk on a lead?** Absolutely. Start harness training early and most Maine Coons take to it readily. They enjoy outdoor exploration with their humans.
+
+**At what age should I start training my Maine Coon?** Immediately upon bringing them home. The socialisation window closes at 14 weeks, so early positive experiences are critical.
+
+Ready to bring home a kitten that has already had expert early socialisation? Browse our [available Maine Coon kittens](/shop/).
     `,
   },
 ];

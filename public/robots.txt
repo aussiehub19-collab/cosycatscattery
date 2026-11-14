@@ -3,11 +3,10 @@ Disallow: /thank-you-contact/
 Disallow: /thank-you-order/
 Disallow: /thank-you-wholesale/
 Disallow: /checkout/
-Disallow: /admin/
 Sitemap: https://cosycatscattery.com.au/sitemap.xml
 Agentmap: https://cosycatscattery.com.au/.well-known/ai-catalog.json
 
-Content-Signal: search=yes, ai-input=yes, ai-train=yes
+Content-Signal: search=yes, ai-input=yes, ai-train=no
 
 # AI crawlers — welcome to index product and content pages
 User-agent: GPTBot
@@ -16,22 +15,13 @@ Allow: /
 User-agent: ChatGPT-User
 Allow: /
 
-User-agent: OAI-SearchBot
-Allow: /
-
 User-agent: ClaudeBot
 Allow: /
 
-User-agent: Claude-User
-Allow: /
-
-User-agent: Claude-SearchBot
+User-agent: Claude-Web
 Allow: /
 
 User-agent: PerplexityBot
-Allow: /
-
-User-agent: Perplexity-User
 Allow: /
 
 User-agent: Applebot
@@ -52,22 +42,7 @@ Allow: /
 User-agent: Meta-ExternalAgent
 Allow: /
 
-User-agent: Meta-WebIndexer
-Allow: /
-
-User-agent: MistralAI-User
-Allow: /
-
-User-agent: MistralAI-Index
-Allow: /
-
 User-agent: cohere-ai
-Allow: /
-
-User-agent: YouBot
-Allow: /
-
-User-agent: Timpibot
 Allow: /
 
 # Agent-readable resources
