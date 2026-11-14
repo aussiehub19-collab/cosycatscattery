@@ -72,10 +72,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     images: product.images.map(img => toAbsoluteEscapedImageUrl(baseUrl, img)),
   }));
 
-  // Dynamic Blog routes
+  // Dynamic Blog routes — use the post's publish date as lastModified
   const blogRoutes: MetadataRoute.Sitemap = POSTS.map(post => ({
     url: `${baseUrl}/blog/${post.slug}/`,
-    lastModified: now,
+    lastModified: new Date(post.date),
     changeFrequency: 'weekly',
     priority: 0.75,
     images: [toAbsoluteEscapedImageUrl(baseUrl, post.image)],
